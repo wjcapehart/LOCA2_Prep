@@ -1,0 +1,310 @@
+
+
+```{r}
+library(package = "tidyverse")
+library(package = "readxl")
+
+```
+
+
+```{r}
+xlfile = "/Users/wjc/Library/CloudStorage/OneDrive-SDSMT/LOCA2_Inventory_Validation.xlsx"
+```
+
+```{r}
+pr_sheet = read_excel(path = xlfile, sheet="pr")
+tx_sheet = read_excel(path = xlfile, sheet="tasmax")
+tn_sheet = read_excel(path = xlfile, sheet="tasmin")
+dt_sheet = read_excel(path = xlfile, sheet="DTR")
+
+remove(xlfile)
+
+
+inventory = rbind(pr_sheet,  tx_sheet)
+inventory = rbind(inventory, tn_sheet)
+inventory = rbind(inventory, dt_sheet)
+
+
+
+remove(pr_sheet,tx_sheet,tn_sheet,dt_sheet)
+
+inventory = pivot_longer(data          = inventory,
+                         cols          = "DJF-RMSE":"SON-BIAS",
+                         names_to      = c("Season", "Stat"),
+                         names_pattern = "(.*)-(.*)",
+                         values_to     = "value")
+
+inventory = inventory %>% 
+  filter(Member!="ENSAVG") %>%
+  select("Model", "Member", "Var", "Season", "Stat", "value")
+
+inventory$Stat    = factor(x      = inventory$Stat,
+                          levels = c("BIAS","RMSE","Both"))
+
+inventory$Season = factor(x      = inventory$Season,
+                          levels = c("DJF","MAM","JJA","SON","Annual"))
+
+
+inventory$Var    = factor(x      = inventory$Var,
+                          levels = c("pr","tasmax","tasmin","DTR", "All"))
+
+inventory$Model  = factor(x = inventory$Model)
+inventory$Member = factor(x = inventory$Member)
+
+colnames(inventory)
+```
+
+
+```{r}
+inv_stat = inventory %>%
+  group_by(Model, Member, Var, Season) %>%
+  summarize(value = sqrt(sum(value^2))) %>%
+  mutate(Stat = "Both") %>%
+  ungroup() %>%
+  select("Model", "Member", "Var", "Season", "Stat", "value")
+
+
+
+inv_season = inventory %>%
+  group_by(Model, Member, Var, Stat) %>%
+  summarize(value = sqrt(sum(value^2))) %>%
+  mutate(Season = "Annual")  %>%
+  ungroup() %>%
+  select("Model", "Member", "Var", "Season", "Stat", "value")
+
+
+
+inv_var = inventory %>%
+  group_by(Model, Member, Season, Stat) %>%
+  summarize(value = sqrt(sum(value^2))) %>%
+  mutate(Var = "All")  %>%
+  ungroup() %>%
+  select("Model", "Member", "Var", "Season", "Stat", "value")
+
+  
+```
+
+
+
+
+```{r}
+
+
+inv_var_season = inventory %>%
+  group_by(Model, Member, Stat) %>%
+  summarize(value = sqrt(sum(value^2))) %>%
+  mutate(Var    = "All",
+         Season = "Annual")  %>%
+  ungroup()
+
+
+inv_season_stat = inventory %>%
+  group_by(Model, Member, Var) %>%
+  summarize(value = sqrt(sum(value^2))) %>%
+  mutate(Season = "Annual",
+         Stat   = "Both")  %>%
+  ungroup()
+
+
+
+inv_var_stat = inventory %>%
+  group_by(Model, Member, Season) %>%
+  summarize(value = sqrt(sum(value^2))) %>%
+  mutate(Var     = "All",
+         Stat    = "Both")  %>%
+  ungroup()
+
+
+```
+
+
+```{r}
+
+
+inv_var_season_stat = inventory %>%
+  group_by(Model,Member) %>%
+  summarize(value = sqrt(sum(value^2))) %>%
+  mutate(Var    = "All",
+         Season = "Annual",
+         Stat   = "Both")  %>%
+  ungroup()
+
+
+
+inventory_min_errors = inv_var_season_stat %>% 
+  group_by(Model) %>%
+  summarize(Member = Member[which.min(value)]) %>%
+  ungroup() 
+  
+
+
+inventory = rbind(inventory, inv_season)
+inventory = rbind(inventory, inv_stat)
+inventory = rbind(inventory, inv_var)
+inventory = rbind(inventory, inv_season_stat)
+inventory = rbind(inventory, inv_var_season)
+inventory = rbind(inventory, inv_var_stat)
+inventory = rbind(inventory, inv_var_season_stat)
+
+
+
+inventory$Stat    = factor(x     = inventory$Stat,
+                          levels = c("BIAS", "RMSE", "Both"))
+
+inventory$Season = factor(x      = inventory$Season,
+                          levels = c("DJF", "MAM", "JJA", "SON", "Annual"))
+
+
+inventory$Var    = factor(x      = inventory$Var,
+                          levels = c("pr", "tasmax", "tasmin", "DTR", "All"))
+
+
+
+```
+```{r}
+
+inventory = pivot_wider(data = inventory,
+                        names_from = "Stat")
+
+inventory_min_errors = left_join(inventory_min_errors,
+                                  inventory,
+                                  by = join_by(Model, Member))
+
+remove(inv_season)
+remove(inv_stat)
+remove(inv_var)
+remove(inv_season_stat)
+remove(inv_var_season)
+remove(inv_var_stat)
+remove(inv_var_season_stat)
+
+write_csv(x = inventory_min_errors, file = "./LOCA2_inventory_min_errors.csv")
+write_csv(x = inventory,            file = "./LOCA2_inventory_full.csv")
+
+```
+
+
+```{r}
+temp  = inventory            %>% filter(Season != "Annual" & Var != "All")
+temp2 = inventory_min_errors %>% filter(Season != "Annual" & Var != "All")
+
+
+ggplot(data = temp) +
+  aes(x=BIAS,
+      y=RMSE,
+      color=Var) +
+  theme_bw()+
+  facet_wrap(vars(Season))+
+  ggtitle(label    = "LOCA2 CONUS Validation",
+          subtitle = "All Variables and Seasons, No Aggregation") +
+  geom_hline(yintercept = 0) + 
+  geom_vline(xintercept = 0) +
+  coord_fixed(ratio = 1)+ 
+  xlim(min(c(temp$BIAS)),max(c(temp$BIAS)))+
+  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
+  geom_point(size = 0.75)
+
+
+ggplot(data = temp2) +
+  aes(x=BIAS,
+      y=RMSE,
+      color=Model,
+      shape=Var) +
+  theme_bw()+
+  theme(legend.text = element_text(size = 8)) +
+  theme(legend.spacing.x = unit(0, 'cm')) +
+  theme(legend.spacing.y = unit(0, 'cm')) +
+  facet_wrap(vars(Season))+
+  ggtitle(label    = "LOCA2 CONUS Validation",
+          subtitle = "All Variables and Seasons, No Aggregation") +
+  geom_hline(yintercept = 0) + 
+  geom_vline(xintercept = 0) +
+  coord_fixed(ratio = 1)+ 
+  xlim(min(c(temp$BIAS)),max(c(temp$BIAS)))+
+  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
+  geom_point(data=temp, alpha=0.25, size=0.75)+
+  geom_point()
+
+
+
+
+
+```
+
+
+
+```{r}
+
+temp = inventory             %>% filter(Season == "Annual" & Var !="All" )
+temp2 = inventory_min_errors %>% filter(Season == "Annual" & Var != "All")
+
+ggplot(data = temp) +
+  aes(x=BIAS,
+      y=RMSE,shape=Var,
+      color=Var) +
+  theme_bw()+
+  geom_hline(yintercept = 0) + 
+  geom_vline(xintercept = 0) + 
+  coord_fixed(ratio = 1)+ 
+  xlim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ggtitle(label    = "LOCA2 CONUS Validation",
+          subtitle = "Aggregated across Seasons") +
+  geom_point()
+
+ggplot(data = temp2) +
+  aes(x=BIAS,
+      y=RMSE,shape=Var,
+      color=Model) +
+  theme_bw()+
+  theme(legend.text = element_text(size = 8)) +
+  theme(legend.spacing.x = unit(0, 'cm')) +
+  theme(legend.spacing.y = unit(0, 'cm')) +
+  geom_hline(yintercept = 0) + 
+  geom_vline(xintercept = 0) + 
+  coord_fixed(ratio = 1)+ 
+  xlim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ggtitle(label    = "LOCA2 CONUS Validation",
+          subtitle = "Aggregated across Seasons") +
+  geom_point(data=temp, alpha=0.25, size=0.75) +
+  geom_point(data=temp2)
+
+
+```
+
+```{r}
+
+temp  = inventory            %>% filter(Season =="Annual" & Var == "All")
+temp2 = inventory_min_errors %>% filter(Season =="Annual" & Var == "All")
+
+ggplot(data = temp) +
+  aes(x=BIAS,
+      y=RMSE,
+      color=Model) +
+  theme_bw()+
+  geom_hline(yintercept = 0) + 
+  geom_vline(xintercept = 0) + 
+  coord_fixed(ratio = 1)+ 
+  xlim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ggtitle(label    = "LOCA2 CONUS Validation",
+          subtitle = "Aggregated across Seasons & Variables") +  
+  geom_point()
+
+ggplot(data = temp2) +
+  aes(x=BIAS,
+      y=RMSE,
+      color=Model) +
+  theme_bw()+
+  geom_hline(yintercept = 0) + 
+  geom_vline(xintercept = 0) + 
+  coord_fixed(ratio = 1)+ 
+  xlim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
+  ggtitle(label    = "LOCA2 CONUS Validation",
+          subtitle = "Aggregated across Seasons & Variables") +  
+  geom_point(data=temp, alpha=0.25, size=0.75)+
+  geom_point()
+
+```
