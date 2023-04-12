@@ -3,7 +3,7 @@
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,365,364 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1950.nc
+nohup ncks -O -4 -h -L 8 -d time,0,364 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1950.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1950.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1950.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1950.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1950.nc
@@ -48,7 +48,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,365,364 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1950.nc
+nohup ncks -O -4 -h -L 8 -d time,0,364 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1950.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1950.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1950.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1950.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1950.nc
@@ -93,7 +93,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,365,364 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1950.nc
+nohup ncks -O -4 -h -L 8 -d time,0,364 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1950.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1950.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1950.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1950.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1950.nc
@@ -151,7 +151,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,730,729 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1951.nc
+nohup ncks -O -4 -h -L 8 -d time,365,729 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1951.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1951.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1951.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1951.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1951.nc
@@ -196,7 +196,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,730,729 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1951.nc
+nohup ncks -O -4 -h -L 8 -d time,365,729 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1951.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1951.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1951.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1951.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1951.nc
@@ -241,7 +241,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,730,729 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1951.nc
+nohup ncks -O -4 -h -L 8 -d time,365,729 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1951.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1951.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1951.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1951.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1951.nc
@@ -299,7 +299,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1096,1095 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1952.nc
+nohup ncks -O -4 -h -L 8 -d time,730,1095 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1952.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1952.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1952.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1952.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1952.nc
@@ -344,7 +344,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1096,1095 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1952.nc
+nohup ncks -O -4 -h -L 8 -d time,730,1095 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1952.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1952.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1952.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1952.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1952.nc
@@ -389,7 +389,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1096,1095 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1952.nc
+nohup ncks -O -4 -h -L 8 -d time,730,1095 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1952.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1952.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1952.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1952.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1952.nc
@@ -447,7 +447,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1461,1460 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1953.nc
+nohup ncks -O -4 -h -L 8 -d time,1096,1460 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1953.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1953.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1953.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1953.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1953.nc
@@ -492,7 +492,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1461,1460 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1953.nc
+nohup ncks -O -4 -h -L 8 -d time,1096,1460 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1953.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1953.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1953.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1953.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1953.nc
@@ -537,7 +537,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1461,1460 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1953.nc
+nohup ncks -O -4 -h -L 8 -d time,1096,1460 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1953.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1953.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1953.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1953.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1953.nc
@@ -595,7 +595,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1826,1825 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1954.nc
+nohup ncks -O -4 -h -L 8 -d time,1461,1825 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1954.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1954.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1954.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1954.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1954.nc
@@ -640,7 +640,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1826,1825 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1954.nc
+nohup ncks -O -4 -h -L 8 -d time,1461,1825 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1954.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1954.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1954.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1954.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1954.nc
@@ -685,7 +685,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,1826,1825 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1954.nc
+nohup ncks -O -4 -h -L 8 -d time,1461,1825 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1954.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1954.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1954.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1954.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1954.nc
@@ -743,7 +743,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2191,2190 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1955.nc
+nohup ncks -O -4 -h -L 8 -d time,1826,2190 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1955.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1955.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1955.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1955.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1955.nc
@@ -788,7 +788,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2191,2190 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1955.nc
+nohup ncks -O -4 -h -L 8 -d time,1826,2190 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1955.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1955.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1955.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1955.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1955.nc
@@ -833,7 +833,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2191,2190 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1955.nc
+nohup ncks -O -4 -h -L 8 -d time,1826,2190 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1955.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1955.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1955.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1955.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1955.nc
@@ -891,7 +891,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2557,2556 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1956.nc
+nohup ncks -O -4 -h -L 8 -d time,2191,2556 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1956.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1956.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1956.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1956.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1956.nc
@@ -936,7 +936,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2557,2556 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1956.nc
+nohup ncks -O -4 -h -L 8 -d time,2191,2556 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1956.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1956.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1956.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1956.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1956.nc
@@ -981,7 +981,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2557,2556 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1956.nc
+nohup ncks -O -4 -h -L 8 -d time,2191,2556 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1956.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1956.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1956.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1956.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1956.nc
@@ -1039,7 +1039,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2922,2921 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1957.nc
+nohup ncks -O -4 -h -L 8 -d time,2557,2921 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1957.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1957.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1957.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1957.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1957.nc
@@ -1084,7 +1084,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2922,2921 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1957.nc
+nohup ncks -O -4 -h -L 8 -d time,2557,2921 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1957.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1957.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1957.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1957.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1957.nc
@@ -1129,7 +1129,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,2922,2921 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1957.nc
+nohup ncks -O -4 -h -L 8 -d time,2557,2921 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1957.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1957.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1957.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1957.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1957.nc
@@ -1187,7 +1187,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,3287,3286 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1958.nc
+nohup ncks -O -4 -h -L 8 -d time,2922,3286 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1958.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1958.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1958.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1958.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1958.nc
@@ -1232,7 +1232,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,3287,3286 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1958.nc
+nohup ncks -O -4 -h -L 8 -d time,2922,3286 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1958.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1958.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1958.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1958.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1958.nc
@@ -1277,7 +1277,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,3287,3286 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1958.nc
+nohup ncks -O -4 -h -L 8 -d time,2922,3286 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1958.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1958.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1958.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1958.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1958.nc
@@ -1335,7 +1335,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,3652,3651 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1959.nc
+nohup ncks -O -4 -h -L 8 -d time,3287,3651 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1959.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1959.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1959.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1959.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1959.nc
@@ -1380,7 +1380,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,3652,3651 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1959.nc
+nohup ncks -O -4 -h -L 8 -d time,3287,3651 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1959.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1959.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1959.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1959.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1959.nc
@@ -1425,7 +1425,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,3652,3651 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1959.nc
+nohup ncks -O -4 -h -L 8 -d time,3287,3651 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1959.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1959.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1959.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1959.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1959.nc
@@ -1483,7 +1483,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4018,4017 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1960.nc
+nohup ncks -O -4 -h -L 8 -d time,3652,4017 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1960.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1960.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1960.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1960.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1960.nc
@@ -1528,7 +1528,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4018,4017 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1960.nc
+nohup ncks -O -4 -h -L 8 -d time,3652,4017 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1960.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1960.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1960.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1960.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1960.nc
@@ -1573,7 +1573,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4018,4017 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1960.nc
+nohup ncks -O -4 -h -L 8 -d time,3652,4017 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1960.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1960.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1960.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1960.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1960.nc
@@ -1631,7 +1631,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4383,4382 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1961.nc
+nohup ncks -O -4 -h -L 8 -d time,4018,4382 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1961.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1961.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1961.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1961.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1961.nc
@@ -1676,7 +1676,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4383,4382 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1961.nc
+nohup ncks -O -4 -h -L 8 -d time,4018,4382 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1961.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1961.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1961.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1961.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1961.nc
@@ -1721,7 +1721,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4383,4382 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1961.nc
+nohup ncks -O -4 -h -L 8 -d time,4018,4382 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1961.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1961.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1961.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1961.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1961.nc
@@ -1779,7 +1779,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4748,4747 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1962.nc
+nohup ncks -O -4 -h -L 8 -d time,4383,4747 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1962.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1962.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1962.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1962.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1962.nc
@@ -1824,7 +1824,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4748,4747 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1962.nc
+nohup ncks -O -4 -h -L 8 -d time,4383,4747 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1962.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1962.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1962.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1962.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1962.nc
@@ -1869,7 +1869,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,4748,4747 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1962.nc
+nohup ncks -O -4 -h -L 8 -d time,4383,4747 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1962.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1962.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1962.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1962.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1962.nc
@@ -1927,7 +1927,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5113,5112 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1963.nc
+nohup ncks -O -4 -h -L 8 -d time,4748,5112 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1963.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1963.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1963.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1963.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1963.nc
@@ -1972,7 +1972,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5113,5112 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1963.nc
+nohup ncks -O -4 -h -L 8 -d time,4748,5112 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1963.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1963.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1963.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1963.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1963.nc
@@ -2017,7 +2017,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5113,5112 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1963.nc
+nohup ncks -O -4 -h -L 8 -d time,4748,5112 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1963.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1963.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1963.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1963.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1963.nc
@@ -2075,7 +2075,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5479,5478 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1964.nc
+nohup ncks -O -4 -h -L 8 -d time,5113,5478 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1964.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1964.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1964.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1964.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1964.nc
@@ -2120,7 +2120,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5479,5478 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1964.nc
+nohup ncks -O -4 -h -L 8 -d time,5113,5478 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1964.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1964.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1964.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1964.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1964.nc
@@ -2165,7 +2165,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5479,5478 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1964.nc
+nohup ncks -O -4 -h -L 8 -d time,5113,5478 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1964.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1964.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1964.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1964.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1964.nc
@@ -2223,7 +2223,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5844,5843 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1965.nc
+nohup ncks -O -4 -h -L 8 -d time,5479,5843 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1965.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1965.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1965.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1965.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1965.nc
@@ -2268,7 +2268,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5844,5843 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1965.nc
+nohup ncks -O -4 -h -L 8 -d time,5479,5843 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1965.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1965.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1965.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1965.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1965.nc
@@ -2313,7 +2313,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,5844,5843 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1965.nc
+nohup ncks -O -4 -h -L 8 -d time,5479,5843 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1965.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1965.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1965.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1965.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1965.nc
@@ -2371,7 +2371,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6209,6208 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1966.nc
+nohup ncks -O -4 -h -L 8 -d time,5844,6208 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1966.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1966.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1966.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1966.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1966.nc
@@ -2416,7 +2416,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6209,6208 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1966.nc
+nohup ncks -O -4 -h -L 8 -d time,5844,6208 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1966.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1966.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1966.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1966.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1966.nc
@@ -2461,7 +2461,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6209,6208 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1966.nc
+nohup ncks -O -4 -h -L 8 -d time,5844,6208 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1966.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1966.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1966.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1966.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1966.nc
@@ -2519,7 +2519,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6574,6573 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1967.nc
+nohup ncks -O -4 -h -L 8 -d time,6209,6573 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1967.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1967.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1967.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1967.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1967.nc
@@ -2564,7 +2564,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6574,6573 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1967.nc
+nohup ncks -O -4 -h -L 8 -d time,6209,6573 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1967.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1967.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1967.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1967.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1967.nc
@@ -2609,7 +2609,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6574,6573 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1967.nc
+nohup ncks -O -4 -h -L 8 -d time,6209,6573 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1967.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1967.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1967.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1967.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1967.nc
@@ -2667,7 +2667,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6940,6939 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1968.nc
+nohup ncks -O -4 -h -L 8 -d time,6574,6939 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1968.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1968.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1968.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1968.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1968.nc
@@ -2712,7 +2712,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6940,6939 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1968.nc
+nohup ncks -O -4 -h -L 8 -d time,6574,6939 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1968.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1968.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1968.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1968.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1968.nc
@@ -2757,7 +2757,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,6940,6939 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1968.nc
+nohup ncks -O -4 -h -L 8 -d time,6574,6939 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1968.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1968.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1968.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1968.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1968.nc
@@ -2815,7 +2815,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,7305,7304 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1969.nc
+nohup ncks -O -4 -h -L 8 -d time,6940,7304 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1969.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1969.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1969.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1969.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1969.nc
@@ -2860,7 +2860,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,7305,7304 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1969.nc
+nohup ncks -O -4 -h -L 8 -d time,6940,7304 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1969.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1969.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1969.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1969.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1969.nc
@@ -2905,7 +2905,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,7305,7304 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1969.nc
+nohup ncks -O -4 -h -L 8 -d time,6940,7304 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1969.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1969.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1969.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1969.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1969.nc
@@ -2963,7 +2963,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,7670,7669 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1970.nc
+nohup ncks -O -4 -h -L 8 -d time,7305,7669 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1970.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1970.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1970.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1970.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1970.nc
@@ -3008,7 +3008,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,7670,7669 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1970.nc
+nohup ncks -O -4 -h -L 8 -d time,7305,7669 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1970.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1970.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1970.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1970.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1970.nc
@@ -3053,7 +3053,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,7670,7669 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1970.nc
+nohup ncks -O -4 -h -L 8 -d time,7305,7669 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1970.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1970.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1970.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1970.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1970.nc
@@ -3111,7 +3111,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8035,8034 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1971.nc
+nohup ncks -O -4 -h -L 8 -d time,7670,8034 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1971.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1971.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1971.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1971.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1971.nc
@@ -3156,7 +3156,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8035,8034 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1971.nc
+nohup ncks -O -4 -h -L 8 -d time,7670,8034 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1971.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1971.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1971.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1971.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1971.nc
@@ -3201,7 +3201,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8035,8034 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1971.nc
+nohup ncks -O -4 -h -L 8 -d time,7670,8034 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1971.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1971.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1971.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1971.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1971.nc
@@ -3259,7 +3259,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8401,8400 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1972.nc
+nohup ncks -O -4 -h -L 8 -d time,8035,8400 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1972.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1972.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1972.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1972.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1972.nc
@@ -3304,7 +3304,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8401,8400 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1972.nc
+nohup ncks -O -4 -h -L 8 -d time,8035,8400 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1972.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1972.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1972.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1972.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1972.nc
@@ -3349,7 +3349,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8401,8400 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1972.nc
+nohup ncks -O -4 -h -L 8 -d time,8035,8400 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1972.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1972.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1972.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1972.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1972.nc
@@ -3407,7 +3407,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8766,8765 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1973.nc
+nohup ncks -O -4 -h -L 8 -d time,8401,8765 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1973.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1973.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1973.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1973.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1973.nc
@@ -3452,7 +3452,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8766,8765 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1973.nc
+nohup ncks -O -4 -h -L 8 -d time,8401,8765 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1973.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1973.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1973.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1973.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1973.nc
@@ -3497,7 +3497,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,8766,8765 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1973.nc
+nohup ncks -O -4 -h -L 8 -d time,8401,8765 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1973.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1973.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1973.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1973.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1973.nc
@@ -3555,7 +3555,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9131,9130 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1974.nc
+nohup ncks -O -4 -h -L 8 -d time,8766,9130 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1974.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1974.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1974.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1974.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1974.nc
@@ -3600,7 +3600,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9131,9130 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1974.nc
+nohup ncks -O -4 -h -L 8 -d time,8766,9130 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1974.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1974.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1974.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1974.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1974.nc
@@ -3645,7 +3645,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9131,9130 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1974.nc
+nohup ncks -O -4 -h -L 8 -d time,8766,9130 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1974.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1974.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1974.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1974.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1974.nc
@@ -3703,7 +3703,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9496,9495 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1975.nc
+nohup ncks -O -4 -h -L 8 -d time,9131,9495 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1975.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1975.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1975.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1975.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1975.nc
@@ -3748,7 +3748,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9496,9495 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1975.nc
+nohup ncks -O -4 -h -L 8 -d time,9131,9495 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1975.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1975.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1975.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1975.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1975.nc
@@ -3793,7 +3793,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9496,9495 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1975.nc
+nohup ncks -O -4 -h -L 8 -d time,9131,9495 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1975.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1975.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1975.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1975.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1975.nc
@@ -3851,7 +3851,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9862,9861 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1976.nc
+nohup ncks -O -4 -h -L 8 -d time,9496,9861 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1976.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1976.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1976.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1976.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1976.nc
@@ -3896,7 +3896,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9862,9861 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1976.nc
+nohup ncks -O -4 -h -L 8 -d time,9496,9861 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1976.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1976.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1976.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1976.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1976.nc
@@ -3941,7 +3941,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,9862,9861 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1976.nc
+nohup ncks -O -4 -h -L 8 -d time,9496,9861 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1976.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1976.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1976.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1976.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1976.nc
@@ -3999,7 +3999,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10227,10226 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1977.nc
+nohup ncks -O -4 -h -L 8 -d time,9862,10226 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1977.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1977.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1977.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1977.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1977.nc
@@ -4044,7 +4044,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10227,10226 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1977.nc
+nohup ncks -O -4 -h -L 8 -d time,9862,10226 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1977.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1977.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1977.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1977.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1977.nc
@@ -4089,7 +4089,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10227,10226 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1977.nc
+nohup ncks -O -4 -h -L 8 -d time,9862,10226 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1977.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1977.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1977.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1977.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1977.nc
@@ -4147,7 +4147,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10592,10591 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1978.nc
+nohup ncks -O -4 -h -L 8 -d time,10227,10591 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1978.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1978.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1978.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1978.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1978.nc
@@ -4192,7 +4192,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10592,10591 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1978.nc
+nohup ncks -O -4 -h -L 8 -d time,10227,10591 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1978.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1978.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1978.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1978.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1978.nc
@@ -4237,7 +4237,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10592,10591 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1978.nc
+nohup ncks -O -4 -h -L 8 -d time,10227,10591 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1978.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1978.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1978.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1978.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1978.nc
@@ -4295,7 +4295,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10957,10956 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1979.nc
+nohup ncks -O -4 -h -L 8 -d time,10592,10956 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1979.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1979.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1979.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1979.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1979.nc
@@ -4340,7 +4340,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10957,10956 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1979.nc
+nohup ncks -O -4 -h -L 8 -d time,10592,10956 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1979.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1979.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1979.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1979.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1979.nc
@@ -4385,7 +4385,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,10957,10956 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1979.nc
+nohup ncks -O -4 -h -L 8 -d time,10592,10956 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1979.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1979.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1979.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1979.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1979.nc
@@ -4443,7 +4443,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,11323,11322 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1980.nc
+nohup ncks -O -4 -h -L 8 -d time,10957,11322 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1980.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1980.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1980.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1980.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1980.nc
@@ -4488,7 +4488,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,11323,11322 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1980.nc
+nohup ncks -O -4 -h -L 8 -d time,10957,11322 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1980.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1980.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1980.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1980.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1980.nc
@@ -4533,7 +4533,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,11323,11322 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1980.nc
+nohup ncks -O -4 -h -L 8 -d time,10957,11322 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1980.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1980.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1980.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1980.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1980.nc
@@ -4591,7 +4591,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,11688,11687 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1981.nc
+nohup ncks -O -4 -h -L 8 -d time,11323,11687 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1981.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1981.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1981.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1981.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1981.nc
@@ -4636,7 +4636,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,11688,11687 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1981.nc
+nohup ncks -O -4 -h -L 8 -d time,11323,11687 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1981.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1981.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1981.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1981.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1981.nc
@@ -4681,7 +4681,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,11688,11687 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1981.nc
+nohup ncks -O -4 -h -L 8 -d time,11323,11687 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1981.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1981.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1981.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1981.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1981.nc
@@ -4739,7 +4739,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12053,12052 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1982.nc
+nohup ncks -O -4 -h -L 8 -d time,11688,12052 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1982.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1982.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1982.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1982.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1982.nc
@@ -4784,7 +4784,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12053,12052 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1982.nc
+nohup ncks -O -4 -h -L 8 -d time,11688,12052 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1982.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1982.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1982.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1982.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1982.nc
@@ -4829,7 +4829,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12053,12052 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1982.nc
+nohup ncks -O -4 -h -L 8 -d time,11688,12052 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1982.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1982.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1982.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1982.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1982.nc
@@ -4887,7 +4887,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12418,12417 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1983.nc
+nohup ncks -O -4 -h -L 8 -d time,12053,12417 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1983.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1983.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1983.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1983.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1983.nc
@@ -4932,7 +4932,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12418,12417 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1983.nc
+nohup ncks -O -4 -h -L 8 -d time,12053,12417 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1983.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1983.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1983.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1983.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1983.nc
@@ -4977,7 +4977,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12418,12417 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1983.nc
+nohup ncks -O -4 -h -L 8 -d time,12053,12417 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1983.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1983.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1983.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1983.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1983.nc
@@ -5035,7 +5035,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12784,12783 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1984.nc
+nohup ncks -O -4 -h -L 8 -d time,12418,12783 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1984.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1984.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1984.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1984.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1984.nc
@@ -5080,7 +5080,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12784,12783 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1984.nc
+nohup ncks -O -4 -h -L 8 -d time,12418,12783 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1984.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1984.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1984.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1984.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1984.nc
@@ -5125,7 +5125,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,12784,12783 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1984.nc
+nohup ncks -O -4 -h -L 8 -d time,12418,12783 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1984.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1984.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1984.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1984.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1984.nc
@@ -5183,7 +5183,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13149,13148 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1985.nc
+nohup ncks -O -4 -h -L 8 -d time,12784,13148 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1985.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1985.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1985.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1985.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1985.nc
@@ -5228,7 +5228,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13149,13148 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1985.nc
+nohup ncks -O -4 -h -L 8 -d time,12784,13148 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1985.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1985.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1985.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1985.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1985.nc
@@ -5273,7 +5273,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13149,13148 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1985.nc
+nohup ncks -O -4 -h -L 8 -d time,12784,13148 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1985.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1985.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1985.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1985.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1985.nc
@@ -5331,7 +5331,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13514,13513 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1986.nc
+nohup ncks -O -4 -h -L 8 -d time,13149,13513 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1986.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1986.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1986.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1986.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1986.nc
@@ -5376,7 +5376,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13514,13513 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1986.nc
+nohup ncks -O -4 -h -L 8 -d time,13149,13513 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1986.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1986.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1986.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1986.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1986.nc
@@ -5421,7 +5421,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13514,13513 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1986.nc
+nohup ncks -O -4 -h -L 8 -d time,13149,13513 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1986.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1986.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1986.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1986.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1986.nc
@@ -5479,7 +5479,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13879,13878 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1987.nc
+nohup ncks -O -4 -h -L 8 -d time,13514,13878 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1987.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1987.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1987.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1987.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1987.nc
@@ -5524,7 +5524,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13879,13878 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1987.nc
+nohup ncks -O -4 -h -L 8 -d time,13514,13878 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1987.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1987.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1987.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1987.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1987.nc
@@ -5569,7 +5569,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,13879,13878 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1987.nc
+nohup ncks -O -4 -h -L 8 -d time,13514,13878 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1987.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1987.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1987.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1987.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1987.nc
@@ -5627,7 +5627,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14245,14244 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1988.nc
+nohup ncks -O -4 -h -L 8 -d time,13879,14244 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1988.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1988.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1988.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1988.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1988.nc
@@ -5672,7 +5672,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14245,14244 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1988.nc
+nohup ncks -O -4 -h -L 8 -d time,13879,14244 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1988.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1988.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1988.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1988.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1988.nc
@@ -5717,7 +5717,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14245,14244 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1988.nc
+nohup ncks -O -4 -h -L 8 -d time,13879,14244 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1988.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1988.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1988.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1988.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1988.nc
@@ -5775,7 +5775,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14610,14609 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1989.nc
+nohup ncks -O -4 -h -L 8 -d time,14245,14609 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1989.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1989.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1989.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1989.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1989.nc
@@ -5820,7 +5820,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14610,14609 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1989.nc
+nohup ncks -O -4 -h -L 8 -d time,14245,14609 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1989.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1989.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1989.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1989.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1989.nc
@@ -5865,7 +5865,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14610,14609 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1989.nc
+nohup ncks -O -4 -h -L 8 -d time,14245,14609 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1989.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1989.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1989.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1989.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1989.nc
@@ -5923,7 +5923,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14975,14974 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1990.nc
+nohup ncks -O -4 -h -L 8 -d time,14610,14974 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1990.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1990.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1990.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1990.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1990.nc
@@ -5968,7 +5968,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14975,14974 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1990.nc
+nohup ncks -O -4 -h -L 8 -d time,14610,14974 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1990.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1990.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1990.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1990.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1990.nc
@@ -6013,7 +6013,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,14975,14974 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1990.nc
+nohup ncks -O -4 -h -L 8 -d time,14610,14974 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1990.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1990.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1990.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1990.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1990.nc
@@ -6071,7 +6071,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,15340,15339 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1991.nc
+nohup ncks -O -4 -h -L 8 -d time,14975,15339 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1991.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1991.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1991.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1991.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1991.nc
@@ -6116,7 +6116,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,15340,15339 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1991.nc
+nohup ncks -O -4 -h -L 8 -d time,14975,15339 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1991.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1991.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1991.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1991.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1991.nc
@@ -6161,7 +6161,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,15340,15339 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1991.nc
+nohup ncks -O -4 -h -L 8 -d time,14975,15339 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1991.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1991.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1991.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1991.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1991.nc
@@ -6219,7 +6219,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,15706,15705 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1992.nc
+nohup ncks -O -4 -h -L 8 -d time,15340,15705 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1992.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1992.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1992.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1992.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1992.nc
@@ -6264,7 +6264,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,15706,15705 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1992.nc
+nohup ncks -O -4 -h -L 8 -d time,15340,15705 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1992.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1992.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1992.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1992.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1992.nc
@@ -6309,7 +6309,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,15706,15705 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1992.nc
+nohup ncks -O -4 -h -L 8 -d time,15340,15705 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1992.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1992.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1992.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1992.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1992.nc
@@ -6367,7 +6367,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16071,16070 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1993.nc
+nohup ncks -O -4 -h -L 8 -d time,15706,16070 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1993.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1993.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1993.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1993.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1993.nc
@@ -6412,7 +6412,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16071,16070 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1993.nc
+nohup ncks -O -4 -h -L 8 -d time,15706,16070 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1993.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1993.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1993.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1993.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1993.nc
@@ -6457,7 +6457,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16071,16070 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1993.nc
+nohup ncks -O -4 -h -L 8 -d time,15706,16070 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1993.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1993.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1993.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1993.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1993.nc
@@ -6515,7 +6515,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16436,16435 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1994.nc
+nohup ncks -O -4 -h -L 8 -d time,16071,16435 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1994.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1994.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1994.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1994.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1994.nc
@@ -6560,7 +6560,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16436,16435 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1994.nc
+nohup ncks -O -4 -h -L 8 -d time,16071,16435 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1994.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1994.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1994.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1994.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1994.nc
@@ -6605,7 +6605,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16436,16435 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1994.nc
+nohup ncks -O -4 -h -L 8 -d time,16071,16435 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1994.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1994.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1994.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1994.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1994.nc
@@ -6663,7 +6663,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16801,16800 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1995.nc
+nohup ncks -O -4 -h -L 8 -d time,16436,16800 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1995.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1995.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1995.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1995.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1995.nc
@@ -6708,7 +6708,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16801,16800 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1995.nc
+nohup ncks -O -4 -h -L 8 -d time,16436,16800 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1995.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1995.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1995.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1995.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1995.nc
@@ -6753,7 +6753,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,16801,16800 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1995.nc
+nohup ncks -O -4 -h -L 8 -d time,16436,16800 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1995.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1995.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1995.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1995.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1995.nc
@@ -6811,7 +6811,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17167,17166 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1996.nc
+nohup ncks -O -4 -h -L 8 -d time,16801,17166 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1996.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1996.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1996.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1996.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1996.nc
@@ -6856,7 +6856,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17167,17166 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1996.nc
+nohup ncks -O -4 -h -L 8 -d time,16801,17166 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1996.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1996.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1996.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1996.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1996.nc
@@ -6901,7 +6901,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17167,17166 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1996.nc
+nohup ncks -O -4 -h -L 8 -d time,16801,17166 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1996.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1996.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1996.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1996.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1996.nc
@@ -6959,7 +6959,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17532,17531 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1997.nc
+nohup ncks -O -4 -h -L 8 -d time,17167,17531 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1997.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1997.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1997.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1997.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1997.nc
@@ -7004,7 +7004,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17532,17531 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1997.nc
+nohup ncks -O -4 -h -L 8 -d time,17167,17531 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1997.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1997.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1997.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1997.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1997.nc
@@ -7049,7 +7049,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17532,17531 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1997.nc
+nohup ncks -O -4 -h -L 8 -d time,17167,17531 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1997.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1997.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1997.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1997.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1997.nc
@@ -7107,7 +7107,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17897,17896 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1998.nc
+nohup ncks -O -4 -h -L 8 -d time,17532,17896 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1998.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1998.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1998.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1998.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1998.nc
@@ -7152,7 +7152,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17897,17896 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1998.nc
+nohup ncks -O -4 -h -L 8 -d time,17532,17896 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1998.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1998.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1998.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1998.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1998.nc
@@ -7197,7 +7197,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,17897,17896 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1998.nc
+nohup ncks -O -4 -h -L 8 -d time,17532,17896 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1998.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1998.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1998.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1998.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1998.nc
@@ -7255,7 +7255,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18262,18261 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1999.nc
+nohup ncks -O -4 -h -L 8 -d time,17897,18261 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1999.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1999.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1999.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1999.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-1999.nc
@@ -7300,7 +7300,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18262,18261 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1999.nc
+nohup ncks -O -4 -h -L 8 -d time,17897,18261 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1999.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1999.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1999.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1999.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-1999.nc
@@ -7345,7 +7345,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18262,18261 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1999.nc
+nohup ncks -O -4 -h -L 8 -d time,17897,18261 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1999.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1999.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1999.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1999.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-1999.nc
@@ -7403,7 +7403,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18628,18627 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2000.nc
+nohup ncks -O -4 -h -L 8 -d time,18262,18627 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2000.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2000.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2000.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2000.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2000.nc
@@ -7448,7 +7448,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18628,18627 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2000.nc
+nohup ncks -O -4 -h -L 8 -d time,18262,18627 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2000.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2000.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2000.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2000.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2000.nc
@@ -7493,7 +7493,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18628,18627 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2000.nc
+nohup ncks -O -4 -h -L 8 -d time,18262,18627 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2000.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2000.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2000.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2000.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2000.nc
@@ -7551,7 +7551,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18993,18992 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2001.nc
+nohup ncks -O -4 -h -L 8 -d time,18628,18992 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2001.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2001.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2001.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2001.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2001.nc
@@ -7596,7 +7596,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18993,18992 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2001.nc
+nohup ncks -O -4 -h -L 8 -d time,18628,18992 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2001.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2001.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2001.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2001.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2001.nc
@@ -7641,7 +7641,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,18993,18992 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2001.nc
+nohup ncks -O -4 -h -L 8 -d time,18628,18992 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2001.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2001.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2001.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2001.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2001.nc
@@ -7699,7 +7699,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,19358,19357 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2002.nc
+nohup ncks -O -4 -h -L 8 -d time,18993,19357 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2002.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2002.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2002.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2002.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2002.nc
@@ -7744,7 +7744,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,19358,19357 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2002.nc
+nohup ncks -O -4 -h -L 8 -d time,18993,19357 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2002.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2002.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2002.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2002.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2002.nc
@@ -7789,7 +7789,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,19358,19357 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2002.nc
+nohup ncks -O -4 -h -L 8 -d time,18993,19357 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2002.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2002.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2002.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2002.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2002.nc
@@ -7847,7 +7847,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,19723,19722 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2003.nc
+nohup ncks -O -4 -h -L 8 -d time,19358,19722 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2003.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2003.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2003.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2003.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2003.nc
@@ -7892,7 +7892,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,19723,19722 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2003.nc
+nohup ncks -O -4 -h -L 8 -d time,19358,19722 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2003.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2003.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2003.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2003.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2003.nc
@@ -7937,7 +7937,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,19723,19722 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2003.nc
+nohup ncks -O -4 -h -L 8 -d time,19358,19722 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2003.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2003.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2003.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2003.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2003.nc
@@ -7995,7 +7995,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20089,20088 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2004.nc
+nohup ncks -O -4 -h -L 8 -d time,19723,20088 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2004.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2004.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2004.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2004.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2004.nc
@@ -8040,7 +8040,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20089,20088 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2004.nc
+nohup ncks -O -4 -h -L 8 -d time,19723,20088 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2004.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2004.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2004.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2004.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2004.nc
@@ -8085,7 +8085,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20089,20088 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2004.nc
+nohup ncks -O -4 -h -L 8 -d time,19723,20088 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2004.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2004.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2004.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2004.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2004.nc
@@ -8143,7 +8143,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20454,20453 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2005.nc
+nohup ncks -O -4 -h -L 8 -d time,20089,20453 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2005.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2005.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2005.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2005.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2005.nc
@@ -8188,7 +8188,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20454,20453 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2005.nc
+nohup ncks -O -4 -h -L 8 -d time,20089,20453 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2005.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2005.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2005.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2005.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2005.nc
@@ -8233,7 +8233,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20454,20453 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2005.nc
+nohup ncks -O -4 -h -L 8 -d time,20089,20453 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2005.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2005.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2005.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2005.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2005.nc
@@ -8291,7 +8291,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20819,20818 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2006.nc
+nohup ncks -O -4 -h -L 8 -d time,20454,20818 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2006.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2006.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2006.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2006.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2006.nc
@@ -8336,7 +8336,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20819,20818 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2006.nc
+nohup ncks -O -4 -h -L 8 -d time,20454,20818 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2006.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2006.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2006.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2006.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2006.nc
@@ -8381,7 +8381,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,20819,20818 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2006.nc
+nohup ncks -O -4 -h -L 8 -d time,20454,20818 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2006.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2006.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2006.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2006.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2006.nc
@@ -8439,7 +8439,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21184,21183 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2007.nc
+nohup ncks -O -4 -h -L 8 -d time,20819,21183 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2007.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2007.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2007.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2007.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2007.nc
@@ -8484,7 +8484,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21184,21183 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2007.nc
+nohup ncks -O -4 -h -L 8 -d time,20819,21183 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2007.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2007.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2007.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2007.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2007.nc
@@ -8529,7 +8529,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21184,21183 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2007.nc
+nohup ncks -O -4 -h -L 8 -d time,20819,21183 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2007.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2007.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2007.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2007.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2007.nc
@@ -8587,7 +8587,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21550,21549 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2008.nc
+nohup ncks -O -4 -h -L 8 -d time,21184,21549 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2008.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2008.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2008.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2008.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2008.nc
@@ -8632,7 +8632,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21550,21549 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2008.nc
+nohup ncks -O -4 -h -L 8 -d time,21184,21549 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2008.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2008.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2008.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2008.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2008.nc
@@ -8677,7 +8677,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21550,21549 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2008.nc
+nohup ncks -O -4 -h -L 8 -d time,21184,21549 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2008.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2008.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2008.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2008.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2008.nc
@@ -8735,7 +8735,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21915,21914 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2009.nc
+nohup ncks -O -4 -h -L 8 -d time,21550,21914 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2009.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2009.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2009.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2009.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2009.nc
@@ -8780,7 +8780,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21915,21914 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2009.nc
+nohup ncks -O -4 -h -L 8 -d time,21550,21914 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2009.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2009.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2009.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2009.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2009.nc
@@ -8825,7 +8825,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,21915,21914 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2009.nc
+nohup ncks -O -4 -h -L 8 -d time,21550,21914 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2009.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2009.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2009.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2009.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2009.nc
@@ -8883,7 +8883,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,22280,22279 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2010.nc
+nohup ncks -O -4 -h -L 8 -d time,21915,22279 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2010.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2010.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2010.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2010.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2010.nc
@@ -8928,7 +8928,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,22280,22279 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2010.nc
+nohup ncks -O -4 -h -L 8 -d time,21915,22279 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2010.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2010.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2010.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2010.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2010.nc
@@ -8973,7 +8973,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,22280,22279 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2010.nc
+nohup ncks -O -4 -h -L 8 -d time,21915,22279 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2010.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2010.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2010.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2010.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2010.nc
@@ -9031,7 +9031,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,22645,22644 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2011.nc
+nohup ncks -O -4 -h -L 8 -d time,22280,22644 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2011.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2011.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2011.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2011.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2011.nc
@@ -9076,7 +9076,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,22645,22644 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2011.nc
+nohup ncks -O -4 -h -L 8 -d time,22280,22644 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2011.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2011.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2011.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2011.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2011.nc
@@ -9121,7 +9121,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,22645,22644 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2011.nc
+nohup ncks -O -4 -h -L 8 -d time,22280,22644 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2011.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2011.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2011.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2011.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2011.nc
@@ -9179,7 +9179,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23011,23010 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2012.nc
+nohup ncks -O -4 -h -L 8 -d time,22645,23010 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2012.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2012.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2012.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2012.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2012.nc
@@ -9224,7 +9224,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23011,23010 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2012.nc
+nohup ncks -O -4 -h -L 8 -d time,22645,23010 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2012.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2012.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2012.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2012.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2012.nc
@@ -9269,7 +9269,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23011,23010 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2012.nc
+nohup ncks -O -4 -h -L 8 -d time,22645,23010 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2012.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2012.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2012.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2012.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2012.nc
@@ -9327,7 +9327,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23376,23375 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2013.nc
+nohup ncks -O -4 -h -L 8 -d time,23011,23375 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2013.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2013.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2013.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2013.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2013.nc
@@ -9372,7 +9372,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23376,23375 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2013.nc
+nohup ncks -O -4 -h -L 8 -d time,23011,23375 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2013.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2013.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2013.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2013.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2013.nc
@@ -9417,7 +9417,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23376,23375 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2013.nc
+nohup ncks -O -4 -h -L 8 -d time,23011,23375 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2013.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2013.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2013.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2013.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2013.nc
@@ -9475,7 +9475,7 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /proj
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23741,23740 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2014.nc
+nohup ncks -O -4 -h -L 8 -d time,23376,23740 /data/GLOBUS/wjc/historical/tasmax/tasmax.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2014.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2014.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2014.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2014.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmax___GFDL-ESM4___historical___Y-2014.nc
@@ -9520,7 +9520,7 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23741,23740 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2014.nc
+nohup ncks -O -4 -h -L 8 -d time,23376,23740 /data/GLOBUS/wjc/historical/tasmin/tasmin.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2014.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2014.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2014.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2014.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___tasmin___GFDL-ESM4___historical___Y-2014.nc
@@ -9565,7 +9565,7 @@ nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
-nohup ncks -O -4 -h -L 8 -d time,23741,23740 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2014.nc
+nohup ncks -O -4 -h -L 8 -d time,23376,23740 /data/GLOBUS/wjc/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20220519.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2014.nc
  
 nohup ncap2 -O -4 -h -L 8 -s 'defdim("bnds",2);time@bounds="time_bnds";time_bnds[$time,$bnds]=0.0;*time_dff=0.5*(time(1)-time(0));time_bnds(:,0)=time-time_dff;time_bnds(:,1)=time+time_dff;lat@bounds="lat_bnds";lat_bnds[$lat,$bnds]=0.0;*lat_dff=0.5*(lat(1)-lat(0));lat_bnds(:,0)=lat-lat_dff;lat_bnds(:,1)=lat+lat_dff;lon@bounds="lat_bnds";lon_bnds[$lon,$bnds]=0.0;*lon_dff=0.5*(lon(1)-lon(0));lon_bnds(:,0)=lon-lon_dff;lon_bnds(:,1)=lon+lon_dff;' /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2014.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2014.nc.temp.nc
 nohup mv -fv /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2014.nc.temp.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4___historical___Y-2014.nc
