@@ -149,6 +149,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2015.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,365,730 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2016.nc
@@ -296,6 +297,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2016.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2016.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -445,6 +447,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2017.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,1096,1460 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2018.nc
@@ -592,6 +595,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2018.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2018.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -741,6 +745,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2019.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,1826,2191 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2020.nc
@@ -888,6 +893,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2020.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2020.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -1037,6 +1043,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2021.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,2557,2921 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2022.nc
@@ -1184,6 +1191,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2022.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2022.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -1333,6 +1341,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2023.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,3287,3652 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2024.nc
@@ -1480,6 +1489,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2024.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2024.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -1629,6 +1639,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2025.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,4018,4382 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2026.nc
@@ -1776,6 +1787,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2026.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2026.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -1925,6 +1937,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2027.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,4748,5113 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2028.nc
@@ -2072,6 +2085,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2028.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2028.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -2221,6 +2235,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2029.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,5479,5843 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2030.nc
@@ -2368,6 +2383,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2030.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2030.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -2517,6 +2533,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2031.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,6209,6574 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2032.nc
@@ -2664,6 +2681,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2032.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2032.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -2813,6 +2831,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2033.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,6940,7304 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2034.nc
@@ -2960,6 +2979,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2034.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2034.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -3109,6 +3129,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2035.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,7670,8035 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2036.nc
@@ -3256,6 +3277,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2036.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2036.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -3405,6 +3427,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2037.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,8401,8765 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2038.nc
@@ -3552,6 +3575,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2038.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2038.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -3701,6 +3725,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2039.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,9131,9496 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2040.nc
@@ -3848,6 +3873,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2040.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2040.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -3997,6 +4023,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2041.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,9862,10226 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2042.nc
@@ -4144,6 +4171,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2042.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2042.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -4293,6 +4321,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2043.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,10592,10957 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2044.nc
@@ -4440,6 +4469,8 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2044.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2044.nc
 # .........................................
+# -----------------------------------------
+# =========================================
 # =========================================
 # -----------------------------------------
 # .........................................
@@ -4590,6 +4621,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2045.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,365,729 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2046.nc
@@ -4737,6 +4769,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2046.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2046.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -4886,6 +4919,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2047.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,1095,1460 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2048.nc
@@ -5033,6 +5067,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2048.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2048.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -5182,6 +5217,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2049.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,1826,2190 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2050.nc
@@ -5329,6 +5365,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2050.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2050.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -5478,6 +5515,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2051.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,2556,2921 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2052.nc
@@ -5625,6 +5663,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2052.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2052.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -5774,6 +5813,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2053.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,3287,3651 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2054.nc
@@ -5921,6 +5961,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2054.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2054.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -6070,6 +6111,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2055.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,4017,4382 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2056.nc
@@ -6217,6 +6259,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2056.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2056.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -6366,6 +6409,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2057.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,4748,5112 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2058.nc
@@ -6513,6 +6557,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2058.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2058.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -6662,6 +6707,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2059.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,5478,5843 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2060.nc
@@ -6809,6 +6855,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2060.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2060.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -6958,6 +7005,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2061.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,6209,6573 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2062.nc
@@ -7105,6 +7153,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2062.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2062.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -7254,6 +7303,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2063.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,6939,7304 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2064.nc
@@ -7401,6 +7451,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2064.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2064.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -7550,6 +7601,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2065.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,7670,8034 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2066.nc
@@ -7697,6 +7749,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2066.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2066.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -7846,6 +7899,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2067.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,8400,8765 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2068.nc
@@ -7993,6 +8047,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2068.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2068.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -8142,6 +8197,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2069.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,9131,9495 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2070.nc
@@ -8289,6 +8345,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2070.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2070.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -8438,6 +8495,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2071.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,9861,10226 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2072.nc
@@ -8585,6 +8643,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2072.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2072.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -8734,6 +8793,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2073.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,10592,10956 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2074.nc
@@ -8881,6 +8941,8 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2074.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2074.nc
 # .........................................
+# -----------------------------------------
+# =========================================
 # =========================================
 # -----------------------------------------
 # .........................................
@@ -9031,6 +9093,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2075.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,365,730 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2076.nc
@@ -9178,6 +9241,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2076.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2076.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -9327,6 +9391,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2077.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,1096,1460 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2078.nc
@@ -9474,6 +9539,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2078.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2078.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -9623,6 +9689,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2079.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,1826,2191 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2080.nc
@@ -9770,6 +9837,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2080.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2080.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -9919,6 +9987,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2081.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,2557,2921 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2082.nc
@@ -10066,6 +10135,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2082.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2082.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -10215,6 +10285,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2083.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,3287,3652 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2084.nc
@@ -10362,6 +10433,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2084.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2084.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -10511,6 +10583,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2085.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,4018,4382 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2086.nc
@@ -10658,6 +10731,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2086.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2086.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -10807,6 +10881,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2087.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,4748,5113 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2088.nc
@@ -10954,6 +11029,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2088.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2088.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -11103,6 +11179,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2089.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,5479,5843 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2090.nc
@@ -11250,6 +11327,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2090.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2090.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -11399,6 +11477,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2091.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,6209,6574 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2092.nc
@@ -11546,6 +11625,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2092.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2092.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -11695,6 +11775,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2093.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,6940,7304 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2094.nc
@@ -11842,6 +11923,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2094.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2094.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -11991,6 +12073,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2095.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,7670,8035 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2096.nc
@@ -12138,6 +12221,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2096.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2096.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -12287,6 +12371,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2097.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,8401,8765 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2098.nc
@@ -12434,6 +12519,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2098.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2098.nc
 # .........................................
+# -----------------------------------------
 # -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
@@ -12583,6 +12669,7 @@ nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LO
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2099.nc
 # .........................................
 # -----------------------------------------
+# -----------------------------------------
 # .........................................
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncks -O -4 -h -d time,9131,9495 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.GFDL-ESM4.ssp245.r1i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___tasmax___GFDL-ESM4___ssp245___Y-2100.nc
@@ -12730,3 +12817,7 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /projects/ECEP/LO
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2100.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-2100.nc
 # .........................................
+# -----------------------------------------
+# =========================================
+nohup cdo  --no_history -f nc4 -z zip_8  mergetime /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245___Y-*.nc /projects/ECEP/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp245/LOCA2-CONUS___GFDL-ESM4___ssp245.nc
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
