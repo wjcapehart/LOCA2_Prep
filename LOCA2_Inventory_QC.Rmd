@@ -8,7 +8,7 @@ library(package = "readxl")
 
 
 ```{r}
-xlfile = "/Users/wjc/Library/CloudStorage/OneDrive-SDSMT/LOCA2_Inventory_Validation.xlsx"
+xlfile = "./LOCA2_Inventory_Validation.xlsx"
 ```
 
 ```{r}
@@ -52,6 +52,11 @@ inventory$Model  = factor(x = inventory$Model)
 inventory$Member = factor(x = inventory$Member)
 
 colnames(inventory)
+
+inventory$Rank = NA
+
+#inventory = inventory %>% filter(Var != "DTR")
+
 ```
 
 
@@ -59,27 +64,26 @@ colnames(inventory)
 inv_stat = inventory %>%
   group_by(Model, Member, Var, Season) %>%
   summarize(value = sqrt(sum(value^2))) %>%
-  mutate(Stat = "Both") %>%
-  ungroup() %>%
-  select("Model", "Member", "Var", "Season", "Stat", "value")
-
-
+  mutate(Stat = "Both",
+         Rank = rank(value))  %>%
+  arrange(value) %>%
+  ungroup() 
 
 inv_season = inventory %>%
   group_by(Model, Member, Var, Stat) %>%
   summarize(value = sqrt(sum(value^2))) %>%
-  mutate(Season = "Annual")  %>%
-  ungroup() %>%
-  select("Model", "Member", "Var", "Season", "Stat", "value")
-
-
+  mutate(Season = "Annual",
+         Rank   = rank(value))   %>%
+  arrange(value) %>%
+  ungroup()
 
 inv_var = inventory %>%
   group_by(Model, Member, Season, Stat) %>%
   summarize(value = sqrt(sum(value^2))) %>%
-  mutate(Var = "All")  %>%
-  ungroup() %>%
-  select("Model", "Member", "Var", "Season", "Stat", "value")
+  mutate(Var = "All",
+         Rank   = rank(value))   %>%
+  arrange(value) %>%
+  ungroup() 
 
   
 ```
@@ -94,31 +98,28 @@ inv_var_season = inventory %>%
   group_by(Model, Member, Stat) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Var    = "All",
-         Season = "Annual")  %>%
+         Season = "Annual",
+         Rank   = rank(value))  %>%
+  arrange(value) %>%
   ungroup()
-
 
 inv_season_stat = inventory %>%
   group_by(Model, Member, Var) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Season = "Annual",
-         Stat   = "Both")  %>%
+         Stat   = "Both",
+         Rank   = rank(value))   %>%
+  arrange(value) %>%
   ungroup()
-
-
 
 inv_var_stat = inventory %>%
   group_by(Model, Member, Season) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Var     = "All",
-         Stat    = "Both")  %>%
+         Stat    = "Both",
+         Rank    = rank(value))  %>%
   ungroup()
 
-
-```
-
-
-```{r}
 
 
 inv_var_season_stat = inventory %>%
@@ -126,18 +127,52 @@ inv_var_season_stat = inventory %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Var    = "All",
          Season = "Annual",
-         Stat   = "Both")  %>%
+         Stat   = "Both",
+         Rank   = rank(value))   %>%
+  arrange(value) %>%
   ungroup()
 
 
+```
 
-inventory_min_errors = inv_var_season_stat %>% 
+```{r}
+
+inventory_1_errors = inv_var_season_stat %>% 
   group_by(Model) %>%
-  summarize(Member = Member[which.min(value)]) %>%
+  filter(Rank == 1 )  %>%
+  arrange(value) %>%
   ungroup() 
   
+  
+inventory_2_errors = inv_var_season_stat %>% 
+  group_by(Model) %>%
+  filter(Rank == 2 ) %>%
+  arrange(value) %>%
+  ungroup() 
+  
+inventory_3_errors = inv_var_season_stat %>% 
+  group_by(Model) %>%
+  filter(Rank == 3 )  %>%
+  arrange(value) %>%
+  ungroup() 
+
+inventory_E1_errors = inv_var_season_stat %>% 
+  filter(Member == "r1i1p1f1",
+         Rank > 2)  %>%
+  arrange(value) %>%
+  ungroup() 
 
 
+inventory_E1_errorsXX = inv_var_season_stat %>% 
+  filter(Member == "r1i1p1f1")  %>%
+  arrange(value) %>%
+  ungroup() 
+
+```
+
+
+```{r}
+  
 inventory = rbind(inventory, inv_season)
 inventory = rbind(inventory, inv_stat)
 inventory = rbind(inventory, inv_var)
@@ -145,8 +180,6 @@ inventory = rbind(inventory, inv_season_stat)
 inventory = rbind(inventory, inv_var_season)
 inventory = rbind(inventory, inv_var_stat)
 inventory = rbind(inventory, inv_var_season_stat)
-
-
 
 inventory$Stat    = factor(x     = inventory$Stat,
                           levels = c("BIAS", "RMSE", "Both"))
@@ -158,17 +191,19 @@ inventory$Season = factor(x      = inventory$Season,
 inventory$Var    = factor(x      = inventory$Var,
                           levels = c("pr", "tasmax", "tasmin", "DTR", "All"))
 
-
-
+inventory = inventory %>% arange(values)
 ```
+
+
+
+
+
+
+
 ```{r}
 
-inventory = pivot_wider(data = inventory,
+inventory2 = pivot_wider(data = inventory %>% select(-Rank),
                         names_from = "Stat")
-
-inventory_min_errors = left_join(inventory_min_errors,
-                                  inventory,
-                                  by = join_by(Model, Member))
 
 remove(inv_season)
 remove(inv_stat)
@@ -178,15 +213,28 @@ remove(inv_var_season)
 remove(inv_var_stat)
 remove(inv_var_season_stat)
 
-write_csv(x = inventory_min_errors, file = "./LOCA2_inventory_min_errors.csv")
-write_csv(x = inventory,            file = "./LOCA2_inventory_full.csv")
+write_csv(x = inventory_1_errors,  file = "./LOCA2_R1_Full_Summary_Errors.csv")
+write_csv(x = inventory_2_errors,  file = "./LOCA2_R2_Full_Summary_Errors.csv")
+write_csv(x = inventory_3_errors,  file = "./LOCA2_R3_Full_Summary_Errors.csv")
+write_csv(x = inventory_E1_errors, file = "./LOCA2_E1_Full_Summary_Errors.csv")
+write_csv(x = inventory,           file = "./LOCA2_All_Errors.csv")
 
 ```
 
 
 ```{r}
-temp  = inventory            %>% filter(Season != "Annual" & Var != "All")
-temp2 = inventory_min_errors %>% filter(Season != "Annual" & Var != "All")
+
+
+
+```
+
+
+```{r}
+temp  = inventory2 %>% 
+  filter(Season != "Annual" & Var != "All")
+
+
+temp2 = inventory_1_errors   %>% filter(Season != "Annual" & Var != "All")
 
 
 ggplot(data = temp) +
@@ -226,6 +274,7 @@ ggplot(data = temp2) +
   geom_point()
 
 
+remove(temp,temp2)
 
 
 
@@ -235,8 +284,8 @@ ggplot(data = temp2) +
 
 ```{r}
 
-temp = inventory             %>% filter(Season == "Annual" & Var !="All" )
-temp2 = inventory_min_errors %>% filter(Season == "Annual" & Var != "All")
+temp = inventory2             %>% filter(Season == "Annual" & Var !="All" )
+temp2 = inventory_1_errors %>% filter(Season == "Annual" & Var != "All")
 
 ggplot(data = temp) +
   aes(x=BIAS,
@@ -270,13 +319,14 @@ ggplot(data = temp2) +
   geom_point(data=temp, alpha=0.25, size=0.75) +
   geom_point(data=temp2)
 
-
+remove(temp,temp2)
 ```
 
 ```{r}
 
-temp  = inventory            %>% filter(Season =="Annual" & Var == "All")
-temp2 = inventory_min_errors %>% filter(Season =="Annual" & Var == "All")
+temp2  = inventory2           %>% filter(Season =="Annual" & Var == "All")
+
+temp = inventory_1_errors %>% filter(Season =="Annual" & Var == "All")
 
 ggplot(data = temp) +
   aes(x=BIAS,
@@ -306,5 +356,7 @@ ggplot(data = temp2) +
           subtitle = "Aggregated across Seasons & Variables") +  
   geom_point(data=temp, alpha=0.25, size=0.75)+
   geom_point()
+
+remove(temp,temp2)
 
 ```
