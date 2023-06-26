@@ -156,14 +156,14 @@ inventory_3_errors = inv_var_season_stat %>%
   arrange(value) %>%
   ungroup() 
 
-inventory_E1_errors = inv_var_season_stat %>% 
+inventory_R1_errors = inv_var_season_stat %>% 
   filter(Member == "r1i1p1f1",
          Rank > 2)  %>%
   arrange(value) %>%
   ungroup() 
 
 
-inventory_E1_errorsXX = inv_var_season_stat %>% 
+inventory_R1_errorsXX = inv_var_season_stat %>% 
   filter(Member == "r1i1p1f1")  %>%
   arrange(value) %>%
   ungroup() 
@@ -191,7 +191,7 @@ inventory$Season = factor(x      = inventory$Season,
 inventory$Var    = factor(x      = inventory$Var,
                           levels = c("pr", "tasmax", "tasmin", "DTR", "All"))
 
-inventory = inventory %>% arange(values)
+inventory = inventory %>% arrange(value)
 ```
 
 
@@ -213,10 +213,10 @@ remove(inv_var_season)
 remove(inv_var_stat)
 remove(inv_var_season_stat)
 
-write_csv(x = inventory_1_errors,  file = "./LOCA2_R1_Full_Summary_Errors.csv")
-write_csv(x = inventory_2_errors,  file = "./LOCA2_R2_Full_Summary_Errors.csv")
-write_csv(x = inventory_3_errors,  file = "./LOCA2_R3_Full_Summary_Errors.csv")
-write_csv(x = inventory_E1_errors, file = "./LOCA2_E1_Full_Summary_Errors.csv")
+write_csv(x = inventory_1_errors,  file = "./LOCA2_E1_Full_Summary_Errors.csv")
+write_csv(x = inventory_2_errors,  file = "./LOCA2_E2_Full_Summary_Errors.csv")
+write_csv(x = inventory_3_errors,  file = "./LOCA2_E3_Full_Summary_Errors.csv")
+write_csv(x = inventory_R1_errors, file = "./LOCA2_R1_Full_Summary_Errors.csv")
 write_csv(x = inventory,           file = "./LOCA2_All_Errors.csv")
 
 ```
