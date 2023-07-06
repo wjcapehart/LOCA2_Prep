@@ -52,7 +52,7 @@ CESM2-LENS,r1i1p1f1,All,Annual,Both,11.24988889,6,XNP,---,XNP,---
 EC-Earth3-Veg,r5i1p1f1,All,Annual,Both,11.28538878,3,,,---,---
 MIROC6,r3i1p1f1,All,Annual,Both,11.29822995,3,,,,
 HadGEM3-GC31-LL,r2i1p1f3,All,Annual,Both,11.35737646,2,XNP,---,---,XNP
-HadGEM3-GC31-LL,r1i1p1f3,All,Annual,Both,11.36001761,3,XNP,---,---,
+HadGEM3-GC31-LL,r1i1p1f3,All,Annual,Both,11.36001761,3,XNP,---,---,XNP
 KACE-1-0-G,r1i1p1f1,All,Annual,Both,11.36705767,2,XNP,XNP,XNP,XNP
 IPSL-CM6A-LR,r2i1p1f1,All,Annual,Both,11.43372205,2,XNP,XNP,XNP,XNP
 MIROC6,r5i1p1f1,All,Annual,Both,11.45818485,4,,---,---,
@@ -80,7 +80,7 @@ MPI-ESM1-2-LR,r3i1p1f1,All,Annual,Both,12.25765067,2,XNP,XNP,XNP,XNP
 EC-Earth3-Veg,r1i1p1f1,All,Annual,Both,12.30121945,4,XNP,XNP,XNP,XNP
 MPI-ESM1-2-HR,r6i1p1f1,All,Annual,Both,12.31097072,3,,---,,---
 EC-Earth3-Veg,r2i1p1f1,All,Annual,Both,12.32720568,5,,,,
-MPI-ESM1-2-HR,r1i1p1f1,All,Annual,Both,12.38749369,4,XNP,XNP,,XNP
+MPI-ESM1-2-HR,r1i1p1f1,All,Annual,Both,12.38749369,4,XNP,XNP,XNP,XNP
 INM-CM5-0,r2i1p1f1,All,Annual,Both,12.44186481,5,,---,,---
 CanESM5,r2i1p1f1,All,Annual,Both,12.44949798,4,,,,
 CESM2-LENS,r8i1p1f1,All,Annual,Both,12.45070279,10,,---,,---
