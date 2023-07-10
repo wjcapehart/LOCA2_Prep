@@ -55,6 +55,18 @@ colnames(inventory)
 
 inventory$Rank = NA
 
+inventory = inventory %>% 
+  group_by(Model,Var,Season,Stat) %>%
+  mutate(Rank   = rank(abs(value)))    %>%
+  ungroup()   %>%
+  arrange(Model,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
+
+
 #inventory = inventory %>% filter(Var != "DTR")
 
 ```
@@ -65,25 +77,45 @@ inv_stat = inventory %>%
   group_by(Model, Member, Var, Season) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Stat = "Both",
-         Rank = rank(value))  %>%
-  arrange(value) %>%
-  ungroup() 
+         Rank = rank(abs(value)))   %>%
+  ungroup()   %>%
+  arrange(Model,
+          Member,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
+
 
 inv_season = inventory %>%
   group_by(Model, Member, Var, Stat) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Season = "Annual",
-         Rank   = rank(value))   %>%
-  arrange(value) %>%
-  ungroup()
+         Rank   = rank(abs(value)))   %>%
+  ungroup()   %>%
+  arrange(Model,
+          Member,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
 
 inv_var = inventory %>%
   group_by(Model, Member, Season, Stat) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Var = "All",
-         Rank   = rank(value))   %>%
-  arrange(value) %>%
-  ungroup() 
+         Rank   = rank(abs(value)))   %>%
+  ungroup()   %>%
+  arrange(Model,
+          Member,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
+
 
   
 ```
@@ -99,26 +131,49 @@ inv_var_season = inventory %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Var    = "All",
          Season = "Annual",
-         Rank   = rank(value))  %>%
-  arrange(value) %>%
-  ungroup()
+         Rank   = rank(abs(value)))  %>%
+  ungroup()   %>%
+  arrange(Model,
+          Member,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
+
+
 
 inv_season_stat = inventory %>%
   group_by(Model, Member, Var) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Season = "Annual",
          Stat   = "Both",
-         Rank   = rank(value))   %>%
-  arrange(value) %>%
-  ungroup()
+         Rank   = rank(abs(value)))   %>%
+  ungroup()   %>%
+  arrange(Model,
+          Member,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
+
 
 inv_var_stat = inventory %>%
   group_by(Model, Member, Season) %>%
   summarize(value = sqrt(sum(value^2))) %>%
   mutate(Var     = "All",
          Stat    = "Both",
-         Rank    = rank(value))  %>%
-  ungroup()
+         Rank    = rank(abs(value)))   %>%
+  ungroup()   %>%
+  arrange(Model,
+          Member,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
+
 
 
 
@@ -128,47 +183,19 @@ inv_var_season_stat = inventory %>%
   mutate(Var    = "All",
          Season = "Annual",
          Stat   = "Both",
-         Rank   = rank(value))   %>%
-  arrange(value) %>%
-  ungroup()
+         Rank   = rank(abs(value)))    %>%
+  ungroup()   %>%
+  arrange(Model,
+          Member,
+          Var,
+          Season,
+          Stat,
+          Rank,
+          value)
 
 
 ```
 
-```{r}
-
-inventory_1_errors = inv_var_season_stat %>% 
-  group_by(Model) %>%
-  filter(Rank == 1 )  %>%
-  arrange(value) %>%
-  ungroup() 
-  
-  
-inventory_2_errors = inv_var_season_stat %>% 
-  group_by(Model) %>%
-  filter(Rank == 2 ) %>%
-  arrange(value) %>%
-  ungroup() 
-  
-inventory_3_errors = inv_var_season_stat %>% 
-  group_by(Model) %>%
-  filter(Rank == 3 )  %>%
-  arrange(value) %>%
-  ungroup() 
-
-inventory_R1_errors = inv_var_season_stat %>% 
-  filter(Member == "r1i1p1f1",
-         Rank > 2)  %>%
-  arrange(value) %>%
-  ungroup() 
-
-
-inventory_R1_errorsXX = inv_var_season_stat %>% 
-  filter(Member == "r1i1p1f1")  %>%
-  arrange(value) %>%
-  ungroup() 
-
-```
 
 
 ```{r}
@@ -191,7 +218,20 @@ inventory$Season = factor(x      = inventory$Season,
 inventory$Var    = factor(x      = inventory$Var,
                           levels = c("pr", "tasmax", "tasmin", "DTR", "All"))
 
-inventory = inventory %>% arrange(value)
+inventory = inventory %>% arrange(Model,
+                                  Member,
+                                  Var,
+                                  Season,
+                                  Stat,
+                                  Rank,
+                                  value)
+
+
+write_csv(x    = inventory,           
+          file = "./LOCA2_All_Errors.csv",
+          na = "")
+
+
 ```
 
 
@@ -213,17 +253,6 @@ remove(inv_var_season)
 remove(inv_var_stat)
 remove(inv_var_season_stat)
 
-write_csv(x = inventory_1_errors,  file = "./LOCA2_E1_Full_Summary_Errors.csv")
-write_csv(x = inventory_2_errors,  file = "./LOCA2_E2_Full_Summary_Errors.csv")
-write_csv(x = inventory_3_errors,  file = "./LOCA2_E3_Full_Summary_Errors.csv")
-write_csv(x = inventory_R1_errors, file = "./LOCA2_R1_Full_Summary_Errors.csv")
-write_csv(x = inventory,           file = "./LOCA2_All_Errors.csv")
-
-```
-
-
-```{r}
-
 
 
 ```
@@ -234,12 +263,12 @@ temp  = inventory2 %>%
   filter(Season != "Annual" & Var != "All")
 
 
-temp2 = inventory_1_errors   %>% filter(Season != "Annual" & Var != "All")
 
 
 ggplot(data = temp) +
   aes(x=BIAS,
       y=RMSE,
+      shape=Var,
       color=Var) +
   theme_bw()+
   facet_wrap(vars(Season))+
@@ -253,28 +282,9 @@ ggplot(data = temp) +
   geom_point(size = 0.75)
 
 
-ggplot(data = temp2) +
-  aes(x=BIAS,
-      y=RMSE,
-      color=Model,
-      shape=Var) +
-  theme_bw()+
-  theme(legend.text = element_text(size = 8)) +
-  theme(legend.spacing.x = unit(0, 'cm')) +
-  theme(legend.spacing.y = unit(0, 'cm')) +
-  facet_wrap(vars(Season))+
-  ggtitle(label    = "LOCA2 CONUS Validation",
-          subtitle = "All Variables and Seasons, No Aggregation") +
-  geom_hline(yintercept = 0) + 
-  geom_vline(xintercept = 0) +
-  coord_fixed(ratio = 1)+ 
-  xlim(min(c(temp$BIAS)),max(c(temp$BIAS)))+
-  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
-  geom_point(data=temp, alpha=0.25, size=0.75)+
-  geom_point()
 
 
-remove(temp,temp2)
+remove(temp)
 
 
 
@@ -285,11 +295,11 @@ remove(temp,temp2)
 ```{r}
 
 temp = inventory2             %>% filter(Season == "Annual" & Var !="All" )
-temp2 = inventory_1_errors %>% filter(Season == "Annual" & Var != "All")
 
 ggplot(data = temp) +
   aes(x=BIAS,
-      y=RMSE,shape=Var,
+      y=RMSE,
+      shape=Var,
       color=Var) +
   theme_bw()+
   geom_hline(yintercept = 0) + 
@@ -301,32 +311,16 @@ ggplot(data = temp) +
           subtitle = "Aggregated across Seasons") +
   geom_point()
 
-ggplot(data = temp2) +
-  aes(x=BIAS,
-      y=RMSE,shape=Var,
-      color=Model) +
-  theme_bw()+
-  theme(legend.text = element_text(size = 8)) +
-  theme(legend.spacing.x = unit(0, 'cm')) +
-  theme(legend.spacing.y = unit(0, 'cm')) +
-  geom_hline(yintercept = 0) + 
-  geom_vline(xintercept = 0) + 
-  coord_fixed(ratio = 1)+ 
-  xlim(0,max(c(temp$BIAS,temp$RMSE)))+
-  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
-  ggtitle(label    = "LOCA2 CONUS Validation",
-          subtitle = "Aggregated across Seasons") +
-  geom_point(data=temp, alpha=0.25, size=0.75) +
-  geom_point(data=temp2)
 
-remove(temp,temp2)
+
+remove(temp)
 ```
 
 ```{r}
 
-temp2  = inventory2           %>% filter(Season =="Annual" & Var == "All")
+temp  = inventory2 %>% filter(Season =="Annual" & Var == "All")
 
-temp = inventory_1_errors %>% filter(Season =="Annual" & Var == "All")
+
 
 ggplot(data = temp) +
   aes(x=BIAS,
@@ -342,21 +336,9 @@ ggplot(data = temp) +
           subtitle = "Aggregated across Seasons & Variables") +  
   geom_point()
 
-ggplot(data = temp2) +
-  aes(x=BIAS,
-      y=RMSE,
-      color=Model) +
-  theme_bw()+
-  geom_hline(yintercept = 0) + 
-  geom_vline(xintercept = 0) + 
-  coord_fixed(ratio = 1)+ 
-  xlim(0,max(c(temp$BIAS,temp$RMSE)))+
-  ylim(0,max(c(temp$BIAS,temp$RMSE)))+
-  ggtitle(label    = "LOCA2 CONUS Validation",
-          subtitle = "Aggregated across Seasons & Variables") +  
-  geom_point(data=temp, alpha=0.25, size=0.75)+
-  geom_point()
+remove(temp)
 
-remove(temp,temp2)
+
+
 
 ```
