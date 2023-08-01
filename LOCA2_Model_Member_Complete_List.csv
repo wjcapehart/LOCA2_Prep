@@ -34,7 +34,7 @@ NorESM2-LM,r2i1p1f1,All,Annual,Both,9.902019996,1,XNP,XNP,---,---
 EC-Earth3,r2i1p1f1,All,Annual,Both,10.14642794,1,XNP,XNP,---,---
 NorESM2-MM,r2i1p1f1,All,Annual,Both,10.24695077,1,XNP,XNP,---,---
 MIROC6,r2i1p1f1,All,Annual,Both,10.39567218,2,XNP,XNP,XNP,XNP
-MRI-ESM2-0,r2i1p1f1,All,Annual,Both,10.75825265,3,,---,,---
+MRI-ESM2-0,r2i1p1f1,All,Annual,Both,10.75825265,3,XNP,---,XNP,---
 ACCESS-ESM1-5,r2i1p1f1,All,Annual,Both,10.93252029,3,,,,
 ACCESS-CM2,r2i1p1f1,All,Annual,Both,10.98954048,3,,,,
 KACE-1-0-G,r2i1p1f1,All,Annual,Both,11.24811095,1,XNP,XNP,XNP,XNP
