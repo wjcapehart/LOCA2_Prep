@@ -53,6 +53,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,0,364 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2015.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -170,6 +218,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,365,730 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2016.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -289,6 +385,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,731,1095 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2017.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -406,6 +550,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1096,1460 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2018.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -525,6 +717,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1461,1825 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2019.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -642,6 +882,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1826,2191 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2020.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -761,6 +1049,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2192,2556 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2021.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -878,6 +1214,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2557,2921 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2022.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -997,6 +1381,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2922,3286 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2023.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1114,6 +1546,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,3287,3652 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2024.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1233,6 +1713,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,3653,4017 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2025.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1350,6 +1878,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4018,4382 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2026.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1469,6 +2045,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4383,4747 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2027.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1586,6 +2210,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4748,5113 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2028.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1705,6 +2377,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5114,5478 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2029.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1822,6 +2542,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5479,5843 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2030.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -1941,6 +2709,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5844,6208 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2031.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2058,6 +2874,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6209,6574 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2032.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2177,6 +3041,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6575,6939 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2033.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2294,6 +3206,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6940,7304 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2034.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2413,6 +3373,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,7305,7669 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2035.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2530,6 +3538,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,7670,8035 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2036.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2649,6 +3705,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8036,8400 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2037.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2766,6 +3870,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8401,8765 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2038.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -2885,6 +4037,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8766,9130 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2039.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -3002,6 +4202,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,9131,9496 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2040.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -3121,6 +4369,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,9497,9861 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2041.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -3238,6 +4534,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,9862,10226 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2042.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -3357,6 +4701,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,10227,10591 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2043.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -3474,6 +4866,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,10592,10957 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2044.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2015-2044.LOCA_16thdeg_v20220519.nc
@@ -3595,6 +5035,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,0,364 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2045.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -3712,6 +5200,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,365,729 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2046.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -3831,6 +5367,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,730,1094 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2047.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -3948,6 +5532,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1095,1460 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2048.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4067,6 +5699,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1461,1825 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2049.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4184,6 +5864,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1826,2190 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2050.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4303,6 +6031,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2191,2555 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2051.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4420,6 +6196,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2556,2921 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2052.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4539,6 +6363,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2922,3286 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2053.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4656,6 +6528,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,3287,3651 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2054.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4775,6 +6695,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,3652,4016 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2055.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -4892,6 +6860,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4017,4382 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2056.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5011,6 +7027,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4383,4747 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2057.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5128,6 +7192,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4748,5112 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2058.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5247,6 +7359,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5113,5477 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2059.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5364,6 +7524,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5478,5843 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2060.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5483,6 +7691,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5844,6208 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2061.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5600,6 +7856,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6209,6573 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2062.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5719,6 +8023,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6574,6938 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2063.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5836,6 +8188,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6939,7304 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2064.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -5955,6 +8355,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,7305,7669 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2065.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6072,6 +8520,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,7670,8034 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2066.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6191,6 +8687,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8035,8399 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2067.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6308,6 +8852,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8400,8765 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2068.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6427,6 +9019,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8766,9130 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2069.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6544,6 +9184,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,9131,9495 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2070.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6663,6 +9351,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,9496,9860 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2071.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6780,6 +9516,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,9861,10226 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2072.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -6899,6 +9683,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,10227,10591 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2073.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -7016,6 +9848,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,10592,10956 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2074.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2045-2074.LOCA_16thdeg_v20220519.nc
@@ -7137,6 +10017,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,0,364 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2075.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -7254,6 +10182,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,365,730 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2076.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -7373,6 +10349,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,731,1095 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2077.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -7490,6 +10514,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1096,1460 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2078.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -7609,6 +10681,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1461,1825 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2079.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -7726,6 +10846,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,1826,2191 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2080.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -7845,6 +11013,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2192,2556 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2081.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -7962,6 +11178,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2557,2921 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2082.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8081,6 +11345,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,2922,3286 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2083.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8198,6 +11510,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,3287,3652 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2084.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8317,6 +11677,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,3653,4017 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2085.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8434,6 +11842,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4018,4382 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2086.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8553,6 +12009,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4383,4747 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2087.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8670,6 +12174,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,4748,5113 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2088.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8789,6 +12341,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5114,5478 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2089.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -8906,6 +12506,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5479,5843 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2090.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9025,6 +12673,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,5844,6208 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2091.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9142,6 +12838,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6209,6574 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2092.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9261,6 +13005,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6575,6939 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2093.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9378,6 +13170,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,6940,7304 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2094.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9497,6 +13337,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,7305,7669 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2095.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9614,6 +13502,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,7670,8035 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2096.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9733,6 +13669,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8036,8400 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2097.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9850,6 +13834,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8401,8765 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2098.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -9969,6 +14001,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,8766,9130 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2099.nc
+ 
+ 
+# . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
@@ -10086,6 +14166,54 @@ nohup ncatted -h -O -a  scale_factor,tasmax,c,f,0.1                             
  
  
 # . . . . . . . . . . . . . . . . . . . . .
+# . . . . . . . . . . . . . . . . . . . . .
+nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a    _FillValue,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a missing_value,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     time_bnds,time,d,,            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lat,d,,                 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lat,c,c,"Latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lat,c,c,"latitude"      /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lat,c,c,"degrees_north" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lat,c,c,"Y"             /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncatted -h -O -a              ,lon,d,,                /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a   description,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a     long_name,lon,c,c,"Longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a standard_name,lon,c,c,"longitude"    /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a         units,lon,c,c,"degrees_east" /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+nohup ncatted -h -O -a          axis,lon,c,c,"X"            /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc
+ 
+nohup ncks -O -4 -h -d time,9131,9495 /data/GLOBUS/wjc/ssp585/tasmin/tasmin.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220413.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+ 
+nohup ncap2 -O -4 -h -s 'time = double(time);lat = float(lat);lon = float(lon);' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+ 
+ 
+nohup ncatted -h -O -a              ,tasmin,d,,                                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncap2 -O -4 -h --script 'where(tasmin > 1e9) tasmin=short(round(-32767)); elsewhere tasmin=short(round((tasmin-273.15)*10));' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncap2 -O -4 -h --script 'tasmin=short(tasmin)' /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+ 
+nohup cdo --no_history mul /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc
+nohup mv -fv /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc.temp.nc /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+ 
+nohup ncatted -h -O -a   description,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a     long_name,tasmin,c,c,"2-m Min Daily Air Temperature" /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a standard_name,tasmin,c,c,"air_temperature"               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a         units,tasmin,c,c,"degC"                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a  cell_methods,tasmin,c,c,"time: minimum"                 /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a    _FillValue,tasmin,c,s,-32767                          /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a missing_value,tasmin,c,s,-32767                      /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a    add_offset,tasmin,c,f,0                               /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+nohup ncatted -h -O -a  scale_factor,tasmin,c,f,0.1                             /data/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___tasmin___FGOALS-g3.r4i1p1f1___ssp585___Y-2100.nc
+ 
+ 
 # . . . . . . . . . . . . . . . . . . . . .
 # . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp585/pr/pr.FGOALS-g3.ssp585.r4i1p1f1.2075-2100.LOCA_16thdeg_v20220519.nc
