@@ -54,7 +54,7 @@ EC-Earth3,r3i1p1f1,All,Annual,Both,10.95901455,3,XNP,---,---,XNP
 ACCESS-CM2,r2i1p1f1,All,Annual,Both,10.98954048,3,XNP,XNP,XNP,XNP
 CESM2-LENS,r7i1p1f1,All,Annual,Both,11.11980216,3,XNP,---,XNP,---
 EC-Earth3-Veg,r5i1p1f1,All,Annual,Both,11.28538878,3,XNP,XNP,---,---
-MIROC6,r3i1p1f1,All,Annual,Both,11.29822995,3,XNP,XNP,,XNP
+MIROC6,r3i1p1f1,All,Annual,Both,11.29822995,3,XNP,XNP,XNP,XNP
 HadGEM3-GC31-LL,r1i1p1f3,All,Annual,Both,11.36001761,3,XNP,---,---,XNP
 IPSL-CM6A-LR,r8i1p1f1,All,Annual,Both,11.57238091,3,XNP,---,,---
 CanESM5,r6i1p1f1,All,Annual,Both,12.10826164,3,,,,
