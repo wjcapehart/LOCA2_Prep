@@ -58,8 +58,8 @@ MIROC6,r3i1p1f1,All,Annual,Both,11.29822995,3,XNP,XNP,XNP,XNP
 HadGEM3-GC31-LL,r1i1p1f3,All,Annual,Both,11.36001761,3,XNP,---,---,XNP
 IPSL-CM6A-LR,r8i1p1f1,All,Annual,Both,11.57238091,3,XNP,---,XNP,---
 CanESM5,r6i1p1f1,All,Annual,Both,12.10826164,3,XNP,XNP,XNP,XNP
-MPI-ESM1-2-HR,r6i1p1f1,All,Annual,Both,12.31097072,3,,---,,---
-MPI-ESM1-2-LR,r8i1p1f1,All,Annual,Both,12.58173279,3,,,,
+MPI-ESM1-2-HR,r6i1p1f1,All,Annual,Both,12.31097072,3,XNP,---,XNP,---
+MPI-ESM1-2-LR,r8i1p1f1,All,Annual,Both,12.58173279,3,XNP,XNP,XNP,--P
 AWI-CM-1-1-MR,r4i1p1f1,All,Annual,Both,12.85457117,3,,---,,---
 KACE-1-0-G,r3i1p1f1,All,Annual,Both,14.45371924,3,,,,
 FGOALS-g3,r5i1p1f1,All,Annual,Both,10.72567014,4,,---,,---
