@@ -60,7 +60,7 @@ IPSL-CM6A-LR,r8i1p1f1,All,Annual,Both,11.57238091,3,XNP,---,XNP,---
 CanESM5,r6i1p1f1,All,Annual,Both,12.10826164,3,XNP,XNP,XNP,XNP
 MPI-ESM1-2-HR,r6i1p1f1,All,Annual,Both,12.31097072,3,XNP,---,XNP,---
 MPI-ESM1-2-LR,r8i1p1f1,All,Annual,Both,12.58173279,3,XNP,XNP,XNP,--P
-AWI-CM-1-1-MR,r4i1p1f1,All,Annual,Both,12.85457117,3,,---,,---
+AWI-CM-1-1-MR,r4i1p1f1,All,Annual,Both,12.85457117,3,XNP,---,XNP,---
 KACE-1-0-G,r3i1p1f1,All,Annual,Both,14.45371924,3,XNP,,,
 FGOALS-g3,r5i1p1f1,All,Annual,Both,10.72567014,4,,---,,---
 INM-CM5-0,r5i1p1f1,All,Annual,Both,11.05757659,4,,---,,---
