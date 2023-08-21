@@ -2,7 +2,7 @@
 # =========================================
 # -----------------------------------------
 # .........................................
-# . . . . . . . . . . . . . . . . . . . . . *
+# . . . . . . . . . . . . . . . . . . . . .
 nohup ncatted -h -O -a           ,global,d,,                 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.KACE-1-0-G.ssp245.r3i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
 nohup ncatted -h -O -a           history,,d,,                 /data/GLOBUS/wjc/ssp245/tasmax/tasmax.KACE-1-0-G.ssp245.r3i1p1f1.2015-2044.LOCA_16thdeg_v20220413.nc
  
