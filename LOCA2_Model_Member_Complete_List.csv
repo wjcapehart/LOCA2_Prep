@@ -24,7 +24,7 @@ Model_Member,Model,Member,Var,Season,Stat,NetError,Rank,historical,ssp245,ssp370
 23,EC-Earth3-Veg,r4i1p1f1,All,Annual,Both,10.94074952,1,XNP,XNP,XNP,XNP,H235,H235,H235,4,4
 24,KACE-1-0-G,r2i1p1f1,All,Annual,Both,11.24811095,1,XNP,XNP,XNP,XNP,H235,H235,H235,4,4
 25,MPI-ESM1-2-HR,r10i1p1f1,All,Annual,Both,11.56849169,1,XNP,---,XNP,---,H-3-,H-3-,H-3-,2,2
-26,MPI-ESM1-2-LR,r10i1p1f1,All,Annual,Both,11.9507322,1,XNP,XNP,XNP,#NAME?,H23-,H23-,H235,3,4
+26,MPI-ESM1-2-LR,r10i1p1f1,All,Annual,Both,11.9507322,1,XNP,XNP,XNP,--P,H23-,H23-,H235,3,4
 27,AWI-CM-1-1-MR,r1i1p1f1,All,Annual,Both,11.980818,1,XNP,XNP,XNP,XNP,H235,H235,H235,4,4
 28,INM-CM5-0,r3i1p1f1,All,Annual,Both,9.848350116,2,XNP,---,XNP,---,H-3-,H-3-,H-3-,2,2
 29,FGOALS-g3,r1i1p1f1,All,Annual,Both,9.942836617,2,XNP,XNP,XNP,XNP,H235,H235,H235,4,4
@@ -59,7 +59,7 @@ Model_Member,Model,Member,Var,Season,Stat,NetError,Rank,historical,ssp245,ssp370
 58,IPSL-CM6A-LR,r8i1p1f1,All,Annual,Both,11.57238091,3,XNP,---,XNP,---,H-3-,H-3-,H-3-,2,2
 59,CanESM5,r6i1p1f1,All,Annual,Both,12.10826164,3,XNP,XNP,XNP,XNP,H235,H235,H235,4,4
 60,MPI-ESM1-2-HR,r6i1p1f1,All,Annual,Both,12.31097072,3,XNP,---,XNP,---,H-3-,H-3-,H-3-,2,2
-61,MPI-ESM1-2-LR,r8i1p1f1,All,Annual,Both,12.58173279,3,XNP,XNP,XNP,#NAME?,H23-,H23-,H235,3,4
+61,MPI-ESM1-2-LR,r8i1p1f1,All,Annual,Both,12.58173279,3,XNP,XNP,XNP,--P,H23-,H23-,H235,3,4
 62,AWI-CM-1-1-MR,r4i1p1f1,All,Annual,Both,12.85457117,3,XNP,---,XNP,---,H-3-,H-3-,H-3-,2,2
 63,KACE-1-0-G,r3i1p1f1,All,Annual,Both,14.45371924,3,XNP,XNP,XNP,XNP,H235,H235,H235,4,4
 64,FGOALS-g3,r5i1p1f1,All,Annual,Both,10.72567014,4,,---,,---,----,----,----,0,2
