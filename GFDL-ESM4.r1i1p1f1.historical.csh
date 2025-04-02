@@ -9,8 +9,8 @@ nohup ncatted -h -O -a              ,time,d,,             ./pr.GFDL-ESM4.histori
 nohup ncatted -h -O -a   description,time,c,c,"time"      ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
 nohup ncatted -h -O -a     long_name,time,c,c,"time"      ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
 nohup ncatted -h -O -a standard_name,time,c,c,"time"      ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
-nohup ncatted -h -O -a      calendar,time,c,c,"days since 1900-01-01" ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
-nohup ncatted -h -O -a         units,time,c,c,"standard"  ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
+nohup ncatted -h -O -a         units,time,c,c,"days since 1900-01-01" ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
+nohup ncatted -h -O -a      calendar,time,c,c,"standard"  ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
 nohup ncatted -h -O -a          axis,time,c,c,"T"         ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
  
 nohup ncatted -h -O -a              ,lat,d,,                 ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
@@ -1716,20 +1716,20 @@ nohup ncatted -h -O -a missing_value,pr,c,s,-32767                      /data/DA
 nohup ncatted -h -O -a    add_offset,pr,c,f,0                           /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
 nohup ncatted -h -O -a  scale_factor,pr,c,f,0.1                         /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
  
-nohup rm -frv  /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup cdo  --no_history -f nc4 -z zip_8  mergetime /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
- 
-nohup ncap2 -O -4 -h -s 'defdim("bnds",2);lon_bnds=make_bounds(lon,$bnds,"lon_bnds");lat_bnds=make_bounds(lat,$bnds,"lat_bnds");time_bnds=make_bounds(time,$bnds,"time_bnds");' /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-*.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc.temp.nc
-nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
- 
-rm  /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup ncatted -h -O -a  title,global,c,c,"LOCA statistically downscaled climate model data, David W. Pierce, Scripps Institution of Oceanography" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup ncatted -h -O -a  author,global,c,c,"David W. Pierce, Scripps Institution of Oceanography" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup ncatted -h -O -a  cmip_id,global,c,c,"CMIP6" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup ncatted -h -O -a  experiment_id,global,c,c,"historical" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
-nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-2014.nc
 # -----------------------------------------
+nohup cdo  --no_history -f nc4 -z zip_8  mergetime /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-*.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+ 
+nohup ncap2 -O -4 -h -s 'defdim("bnds",2);lon_bnds=make_bounds(lon,$bnds,"lon_bnds");lat_bnds=make_bounds(lat,$bnds,"lat_bnds");time_bnds=make_bounds(time,$bnds,"time_bnds");' /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc.temp.nc
+nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+ 
+nohup ncatted -h -O -a  title,global,c,c,"LOCA statistically downscaled climate model data, David W. Pierce, Scripps Institution of Oceanography" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+nohup ncatted -h -O -a  author,global,c,c,"David W. Pierce, Scripps Institution of Oceanography" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+nohup ncatted -h -O -a  cmip_id,global,c,c,"CMIP6" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+nohup ncatted -h -O -a  experiment_id,global,c,c,"historical" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+nohup ncatted -h -O -a  model_source_id,global,c,c,"GFDL-ESM4" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc
+rm -frv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-*.nc
+rm -frv ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
 # =========================================
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
