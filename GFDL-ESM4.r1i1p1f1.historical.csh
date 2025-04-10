@@ -1,4 +1,5 @@
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+nohup cdo --no_history  -f nc4 -z zip_8  delname,pr /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___GFDL-ESM4.r1i1p1f1___historical.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___temps___GFDL-ESM4.r1i1p1f1___historical.nc &
 # =========================================
 nohup wget  --no-verbose --output-document=./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc  https://cirrus.ucsd.edu/~pierce/LOCA2/NAmer/GFDL-ESM4/0p0625deg/r1i1p1f1/historical/pr/pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
  
@@ -1732,4 +1733,6 @@ nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /data
 rm -frv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical___Y-*.nc
 rm -frv ./pr.GFDL-ESM4.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
 # =========================================
+nohup cdo  --no_history -f nc4 -z zip_8 merge /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___temps___GFDL-ESM4.r1i1p1f1___historical.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___GFDL-ESM4.r1i1p1f1___historical.nc ./temp.nc
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# -----------------------------------------
