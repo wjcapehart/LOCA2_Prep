@@ -1459,6 +1459,8 @@ nohup ncatted -h -O -a    _FillValue,pr,c,s,-32767                      /data/DA
 nohup cdo --no_history  -b I16 mul /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical___Y-2014.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical___Y-2014.nc.mask1.temp.nc
 nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical___Y-2014.nc.mask1.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical___Y-2014.nc
 # -----------------------------------------
+rm -frv ./pr.BCC-CSM2-MR.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
+# -----------------------------------------
 nohup cdo  --no_history  -b I16  -f nc4 -z zip_8  mergetime /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical___Y-*.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical.nc
  
 nohup ncatted -h -O -a              ,pr,d,,                             /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical.nc
@@ -1481,7 +1483,6 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"BCC-CSM2-MR" /data/DATASETS/
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical.nc
 rm -frv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical___Y-*.nc
-rm -frv ./pr.BCC-CSM2-MR.historical.r1i1p1f1.1950-2014.LOCA_16thdeg_v20240915.nc
 # =========================================
 nohup cdo  --no_history -f nc4 -z zip_8 merge /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___temps___BCC-CSM2-MR.r1i1p1f1___historical.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___historical.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___BCC-CSM2-MR.r1i1p1f1___historical.nc.mergefinal.temp.nc
 nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___BCC-CSM2-MR.r1i1p1f1___historical.nc.mergefinal.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___BCC-CSM2-MR.r1i1p1f1___historical.nc

@@ -688,6 +688,8 @@ nohup ncatted -h -O -a    _FillValue,pr,c,s,-32767                      /data/DA
  
 nohup cdo --no_history  -b I16 mul /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2044.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2044.nc.mask1.temp.nc
 nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2044.nc.mask1.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2044.nc
+# -----------------------------------------
+rm -frv ./pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2015-2044.LOCA_16thdeg_v20240915.nc
 # =========================================
 nohup wget  --no-verbose --output-document=./pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2045-2074.LOCA_16thdeg_v20240915.nc  https://cirrus.ucsd.edu/~pierce/LOCA2/NAmer/BCC-CSM2-MR/0p0625deg/r1i1p1f1/ssp585/pr/pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2045-2074.LOCA_16thdeg_v20240915.nc
  
@@ -1375,6 +1377,8 @@ nohup ncatted -h -O -a    _FillValue,pr,c,s,-32767                      /data/DA
  
 nohup cdo --no_history  -b I16 mul /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2074.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2074.nc.mask1.temp.nc
 nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2074.nc.mask1.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2074.nc
+# -----------------------------------------
+rm -frv ./pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2045-2074.LOCA_16thdeg_v20240915.nc
 # =========================================
 nohup wget  --no-verbose --output-document=./pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2075-2100.LOCA_16thdeg_v20240915.nc  https://cirrus.ucsd.edu/~pierce/LOCA2/NAmer/BCC-CSM2-MR/0p0625deg/r1i1p1f1/ssp585/pr/pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2075-2100.LOCA_16thdeg_v20240915.nc
  
@@ -1975,6 +1979,8 @@ nohup ncatted -h -O -a    _FillValue,pr,c,s,-32767                      /data/DA
 nohup cdo --no_history  -b I16 mul /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2100.nc ~/GitHub/LOCA2_Prep/loca2_mask.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2100.nc.mask1.temp.nc
 nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2100.nc.mask1.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-2100.nc
 # -----------------------------------------
+rm -frv ./pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2075-2100.LOCA_16thdeg_v20240915.nc
+# -----------------------------------------
 nohup cdo  --no_history  -b I16  -f nc4 -z zip_8  mergetime /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-*.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585.nc
  
 nohup ncatted -h -O -a              ,pr,d,,                             /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585.nc
@@ -1997,7 +2003,6 @@ nohup ncatted -h -O -a  model_source_id,global,c,c,"BCC-CSM2-MR" /data/DATASETS/
 nohup ncatted -h -O -a  model_variant_id,global,c,c,"r1i1p1f1" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585.nc
 nohup ncatted -h -O -a  Conventions,global,c,c,"CF-1.7 CMIP-6.0 UGRID-1.0" /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585.nc
 rm -frv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585___Y-*.nc
-rm -frv ./pr.BCC-CSM2-MR.ssp585.r1i1p1f1.2075-2100.LOCA_16thdeg_v20240915.nc
 # =========================================
 nohup cdo  --no_history -f nc4 -z zip_8 merge /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___temps___BCC-CSM2-MR.r1i1p1f1___ssp585.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___pr___BCC-CSM2-MR.r1i1p1f1___ssp585.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___BCC-CSM2-MR.r1i1p1f1___ssp585.nc.mergefinal.temp.nc
 nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___BCC-CSM2-MR.r1i1p1f1___ssp585.nc.mergefinal.temp.nc /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp585/LOCA2-CONUS___BCC-CSM2-MR.r1i1p1f1___ssp585.nc
