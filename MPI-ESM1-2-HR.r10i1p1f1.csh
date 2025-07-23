@@ -1,0 +1,4 @@
+#!/bin/bash
+nohup ./MPI-ESM1-2-HR.r10i1p1f1.historical.csh &> ./MPI-ESM1-2-HR.r10i1p1f1.historical.out
+nohup ./MPI-ESM1-2-HR.r10i1p1f1.ssp370.csh &> ./MPI-ESM1-2-HR.r10i1p1f1.ssp370.out
+echo '--- FULL TASK IS COMPLETE! ---'
