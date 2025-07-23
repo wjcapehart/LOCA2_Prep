@@ -1489,4 +1489,4 @@ nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 # -----------------------------------------
 ls -altr /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/historical/LOCA2-CONUS___ACCESS-CM2.r1i1p1f1___historical.nc
-echo '--- And we're outahere like Vladimir! ---'
+echo '--- And were outahere like Vladimir! ---'

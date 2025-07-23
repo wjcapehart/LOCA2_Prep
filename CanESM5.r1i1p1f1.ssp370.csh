@@ -2009,4 +2009,4 @@ nohup mv -fv /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 # -----------------------------------------
 ls -altr /data/DATASETS/LOCA_MACA_Ensembles/LOCA2/LOCA2_CONUS/Original_CONUS/ssp370/LOCA2-CONUS___CanESM5.r1i1p1f1___ssp370.nc
-echo '--- And we're outahere like Vladimir! ---'
+echo '--- And were outahere like Vladimir! ---'
